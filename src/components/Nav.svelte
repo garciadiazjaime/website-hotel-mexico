@@ -3,10 +3,13 @@
 </script>
 
 <style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
+	header {
+		background-color: darkolivegreen;
+		color: white;
+	}
+
+ 	nav {
 		font-weight: 300;
-		padding: 0 1em;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -38,28 +41,42 @@
 		content: '';
 		width: calc(100% - 1em);
 		height: 2px;
-		background-color: rgb(255,62,0);
+		background-color: white;
 		display: block;
 		bottom: -1px;
 	}
 
 	a {
 		text-decoration: none;
-		padding: 1em 0.5em;
+		padding: 20px 40px;
 		display: block;
 		text-transform: uppercase;
+	}
+
+	a:last-of-type {
+		padding-right: 0;
 	}
 
 	.content {
 		max-width: 1328px;
 		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.logo {
+		margin: auto 0;
+	}
+
+	img {
+		display: block;
 	}
 </style>
 
 <header>
 	<div class="content">
 		<div class="logo">
-			logo
+			<img src="https://via.placeholder.com/25x40" alt="">
 		</div>
 		<nav>
 			<ul>
