@@ -1,3 +1,6 @@
+<script>
+	import HR from '../components/styledHr.svelte';
+</script>
 <style>
 	h1 {
 		font-size: 2.8em;
@@ -18,3 +21,4 @@
 </svelte:head>
 
 <h1>...</h1>
+<HR />
