@@ -1495,6 +1495,10 @@ supports-color@^7.0.0:
   dependencies:
     has-flag "^4.0.0"
 
+svelte-carousel@^1.0.16:
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/svelte-carousel/-/svelte-carousel-1.0.16.tgz#d61ac8add35d48ecd58dc51b755de67c1236f7f6"
+
 svelte@^3.17.3:
   version "3.44.0"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.44.0.tgz#e6176cb3ad93846ddb4140e93f43098136b23f3b"
