@@ -1,11 +1,6 @@
 <script>
-  import { onMount } from 'svelte';
-  export let cabinData = {};
-  let Carousel;
-  onMount(async () => {
-    const module = await import('svelte-carousel');
-    Carousel = module.default;
-  });
+  export let Carousel;
+  export let cabinData;
 </script>
 <style>
   ul {

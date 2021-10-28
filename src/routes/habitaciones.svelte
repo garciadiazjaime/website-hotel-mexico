@@ -2,9 +2,49 @@
 	import Subheader from '../components/Subheader.svelte';
 	import CabinCard from '../components/CabinCard.svelte';
 
+	import { onMount } from 'svelte';
+
+  let Carousel;
+  onMount(async () => {
+    const module = await import('svelte-carousel');
+    Carousel = module.default;
+  });
+
 	const cabins = [
 		{
 			name: 'Sonora',
+			images: [
+				{
+				 path: 'https://picsum.photos/1000/400?random=1',
+				 id: 'img1',
+				},
+				{
+				 path: 'https://picsum.photos/1000/400?random=2',
+				 id: 'img2',
+				},
+				{
+				 path: 'https://picsum.photos/1000/400?random=3',
+				 id: 'img3',
+				},
+			],
+			caracteristicas: [
+				'Cama queen size',
+				'Baño y regadera',
+				'Sala con chimenea',
+				'Barra comedor',
+				'Patio terraza',
+			],
+			amenidades: [
+				'Limpieza',
+				'Refrigerador',
+				'Televisión',
+				'Internet (wi-fi)',
+				'Aire (AC)',
+			],
+			reservationUrl: 'http://reservationurl.com',
+		},
+		{
+			name: 'Chihuaha',
 			images: [
 				{
 				 path: 'https://picsum.photos/1000/400?random=1',
@@ -148,7 +188,7 @@
 </div>
 <div class="catalog">
 	{#each cabins as cabin}
-		<CabinCard cabinData={cabin} />
+		<CabinCard cabinData={cabin} Carousel={Carousel} />
 	{/each}
 	<a class='ver-mas' href='/'>Ver más</a>
 </div>
