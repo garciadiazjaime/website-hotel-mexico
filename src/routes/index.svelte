@@ -136,7 +136,7 @@
 <div class="cover">
 	<img src="https://via.placeholder.com/1750x800" alt="">
 
-	
+
 	<div class="top">
 		<div class="content">
 			<div class="header">
@@ -151,7 +151,7 @@
 	</div>
 
 	<div class="arrow">
-		<img src="https://via.placeholder.com/30x30" alt="">		
+		<img src="https://via.placeholder.com/30x30" alt="">
 	</div>
 
 </div>
@@ -241,7 +241,7 @@
 				<p>El hotel de</p>
 				<div class="placeholder_f"></div>
 				<p>HOTEL MÉXICO EN LA PIEL &#169;2021</p>
-				HOTEL 
+				HOTEL
 			</div>
 			<div>
 				<div class="placeholder_g"></div>
