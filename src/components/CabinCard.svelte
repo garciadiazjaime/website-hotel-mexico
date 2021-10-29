@@ -11,6 +11,7 @@
     flex-direction: row;
     margin: 0 20px;
     align-content: flex-start;
+    margin-bottom: 80px;
   }
   .col {
     flex-grow: 1;
@@ -25,6 +26,7 @@
     display: block;
     color: white;
     background: darkolivegreen;
+    margin-left: 20px;
   }
   h3 {
     bottom: 30px;
