@@ -2,6 +2,14 @@
 	import Subheader from '../components/Subheader.svelte';
 	import CabinCard from '../components/CabinCard.svelte';
 
+	import { onMount } from 'svelte';
+
+  let Carousel;
+  onMount(async () => {
+    const module = await import('svelte-carousel');
+    Carousel = module.default;
+  });
+
 	const cabins = [
 		{
 			name: 'Sonora',
@@ -278,7 +286,7 @@
 </div>
 <div class="catalog">
 	{#each cabins as cabin}
-		<CabinCard cabinData={cabin} />
+		<CabinCard cabinData={cabin} Carousel={Carousel} />
 	{/each}
 	<a class='ver-mas' href='/'>Ver más</a>
 </div>

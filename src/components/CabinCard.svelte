@@ -1,11 +1,6 @@
 <script>
-  import { onMount } from 'svelte';
-  export let cabinData = {};
-  let Carousel;
-  onMount(async () => {
-    const module = await import('svelte-carousel');
-    Carousel = module.default;
-  });
+  export let Carousel;
+  export let cabinData;
 </script>
 <style>
   ul {
@@ -16,6 +11,7 @@
     flex-direction: row;
     margin: 0 20px;
     align-content: flex-start;
+    margin-bottom: 80px;
   }
   .col {
     flex-grow: 1;
@@ -30,6 +26,7 @@
     display: block;
     color: white;
     background: darkolivegreen;
+    margin-left: 20px;
   }
   h3 {
     bottom: 30px;
