@@ -17,5 +17,5 @@
   <h2 style="color: {color}">
     <slot></slot>
   </h2>
-  <hr style="background-color: {color}">
+  <hr class='hr'style="background-color: {color}">
 </div>
