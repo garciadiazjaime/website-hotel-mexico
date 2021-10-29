@@ -11,15 +11,14 @@
     color: white;
     background: darkolivegreen;
     text-decoration: none;
-    
+    text-transform: uppercase;
     position: relative;
   }
   .small-arrow {
-    text-transform: uppercase;
     padding: 18px 15px;
   }
   .large-arrow {
-    padding: 10px 120px 10px 10px;
+    padding: 18px 120px 18px 15px;
   }
 
   .large-arrow:before {

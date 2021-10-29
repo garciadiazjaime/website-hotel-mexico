@@ -69,12 +69,6 @@
 		left: 50%;
 	}
 
-	.placeholder_b {
-		width: 500px;
-		height: 700px;
-		border: 1px solid black;
-	}
-
 	.placeholder_c {
 		width: 500px;
 		height: 400px;
@@ -110,44 +104,56 @@
 		justify-content: space-between;
 	}
 
-	.col-3 {
+	.col-25 {
+		width: calc(100%/4);
+	}
+
+	.col-33 {
 		width: calc(100%/3);
 	}
 
-	.padding1 {
-		padding-top: 150px;
+	.col-50 {
+		width: calc(100%/2);
 	}
 
-	h3 {
-		padding-top: 20px;
-		font-size: 30px;
+	.col-75 {
+		width: calc(100% - 100%/4);
 	}
 
-	h3 span {
-		display: block;
-		padding-left: 40px;
-	}
-
-	.green_background {
-		background-color: darkolivegreen;
-	}
-
-	.width-50 {
-		width: 50%;
+	.padding-top-50 {
+		padding-top: 50px;
 	}
 
 	.padding-top-100 {
 		padding-top: 100px;
 	}
 
+	.padding-top-150 {
+		padding-top: 150px;
+	}
+
+	.padding-top-200 {
+		padding-top: 200px;
+	}
+
+	h3 {
+		padding-top: 20px;
+		font-size: 50px;
+	}
+
+	h3 span {
+		display: block;
+		text-align: right;
+	}
+
+	.green_background {
+		background-color: darkolivegreen;
+	}
+
 	.arrows {
 		display: flex;
 		justify-content: space-between;
 		padding-top: 40px;
-	}
-
-	.col-4 {
-		width: calc(100%/4);
 	}
 
 	@media (min-width: 480px) {
@@ -187,13 +193,13 @@
 
 <Nav />
 
-<div class="content row padding1">
-	<div class="col-3">
-		<h3>Regresa <span>a casa</span></h3>
+<div class="content row padding-top-150">
+	<div class="col-33">
+		<h3 class="col-50">Regresa <span>a casa</span></h3>
 		<p>
 			La calidez de nuestra tierra convertida en un espacio que te abraza, te da la bienvenida y parece que nunca se acaba.
 		</p>
-		<div class="width-50 padding-top-100">
+		<div class="col-50 padding-top-100">
 			<Button href="/habitaciones" className="small-arrow">ver habitaciones</Button>
 		</div>
 	</div>
@@ -201,25 +207,29 @@
 		<img src="https://via.placeholder.com/750x500" alt="">
 
 		<div class="arrows">
-			<div class="col-4">
+			<div class="col-25">
 				<Arrow className="left-arrow" />
 			</div>
-			<div class="col-4">
+			<div class="col-25">
 				<Arrow className="right-arrow" />
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="content row">
-	<div>
-		<div class="placeholder_b"></div>
-	</div>
-	<div>
-		<h3>El Hotel de México, y el vino</h3>
-		<p>Arquitectura que emerge de la tierra y se fusionan con su entorno, 13 “casas” que rinden homenaje a nuestro México, habitaciones con jacuzzi privado y una ubicación inigualable entre viñedos, áreas rocosas y un sorprendente bosque de encinos, distintas atmósferas dispuestas para emular de manera natural el territorio mexicano; una extensión de 15 hectáreas en donde espacios íntimos y de descanso convergen con espacios de celebración.</p>
-		<p>Te invitamos a celebrar nuestra cultura y disfrutar de nuestra tierra.</p>
-		<a href="/reserva">reserva ahora</a>
+<div class="content">
+	<div class="row padding-top-200">
+		<div>
+			<img src="https://via.placeholder.com/600x800" alt="">
+		</div>
+		<div class="col-50">
+			<h3 class="padding-top-100 col-75">El Hotel de México, <span>y el vino</span></h3>
+			<p class="padding-top-50">Arquitectura que emerge de la tierra y se fusionan con su entorno, 13 “casas” que rinden homenaje a nuestro México, habitaciones con jacuzzi privado y una ubicación inigualable entre viñedos, áreas rocosas y un sorprendente bosque de encinos, distintas atmósferas dispuestas para emular de manera natural el territorio mexicano; una extensión de 15 hectáreas en donde espacios íntimos y de descanso convergen con espacios de celebración.</p>
+			<p class="col-50">Te invitamos a celebrar nuestra cultura y disfrutar de nuestra tierra.</p>
+			<div class="col-50 padding-top-100">
+				<Button href="/reserva" className="large-arrow">reserva ahora</Button>
+			</div>
+		</div>
 	</div>
 </div>
 
