@@ -12,6 +12,8 @@
     list-style-type: decimal-leading-zero;
     color: goldenrod;
     font-size: 30px;
+    padding-left: 50px;
+    margin: 0 20px 40px;
   }
   ol p {
     font-size: 14px;

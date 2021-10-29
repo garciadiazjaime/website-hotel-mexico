@@ -79,6 +79,39 @@
   div {
     width: 100%;
   }
+  h2 {
+    color: goldenrod;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .menu {
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    background:  radial-gradient(ellipse at center, transparent 0%, transparent 35%, gold 50%, transparent 50%);
+    background-size: 15px 15px;
+    background-repeat: repeat-x;
+    background-position: 5px center;
+  }
+  .menu:after {
+    content: "";
+    width: 80px;
+    height: 20px;
+    display: block;
+    margin: -20px auto 0;
+    background: white;
+  }
+  h2 span {
+    font-size: 10px;
+    display: block;
+  }
+  .large-p {
+    font-size: 22px;
+    text-align: center;
+    padding: 60px 150px 80px;
+  }
   .dark {
     background-color: lightgray;
     padding: 80px 30px;
@@ -103,6 +136,8 @@
     columns: 2;
     color: goldenrod;
     font-size: 30px;
+    padding-left: 50px;
+    margin: 0 20px 40px;
   }
   ol p {
     font-size: 14px;
@@ -150,12 +185,23 @@
     right: 23px;
     position: absolute;
   }
+  h4, p {
+    text-align: center;
+  }
+  h4 {
+    color: goldenrod;
+    font-size: 40px;
+  }
+  p span {
+    text-transform: uppercase;
+    display: block;
+  }
 </style>
 <Header backgroundImage="https://picsum.photos/1000/400?random=16">
   <span slot="title">Lo mejor del valle<br>en nuestra cava</span>
 </Header>
 <h2><span>Hotel</span>Mexico en la piel</h2>
-<p>
+<p class='large-p'>
   Encontramos en la calidez de nuestra tierra, el encantode sus paisajes y el sabor de cada uno de nuestros recuerdos, inspiración para crear texturas y emociones que nos transporten a nuestros orígenes, pero sobre todo nos permitan disfrutar la vida al máximo.
 </p>
 <Header backgroundImage="https://picsum.photos/1000/400?random=1">
@@ -195,3 +241,55 @@
   <p>Degusta en nuestra barra de vinos en grupo,<br>y conoce de la mejor calidad que tiene el Valle de Guadalupe</p>
   <a href="/reserva">Reserva ahora</a>
 </div>
+<Header backgroundImage="https://picsum.photos/1000/400?random=4">
+  <div slot="subheader">
+    <Subheader color="white">Cocina</Subheader>
+  </div>
+  <span slot="title">
+    Platillos y<br>aperitivos mexicanos
+  </span>
+  <div slot="icon">
+    <img src="https://picsum.photos/100/100?random=15" alt="icon" />
+  </div>
+</Header>
+<h3 class="menu">Menú</h3>
+<h4>Aperitivos</h4>
+<p>
+  <span>Aperitivo No. 1</span>
+  Texto descriptivo del aperitivo, información de la región
+</p>
+<p>
+  <span>Aperitivo No. 2</span>
+  Texto descriptivo del aperitivo, información de la región
+</p>
+<p>
+  <span>Aperitivo No. 3</span>
+  Texto descriptivo del aperitivo, información de la región
+</p>
+<h4>Especialidades</h4>
+<p>
+  <span>Platillo No. 1</span>
+  Texto descriptivo del platillo, información de la región
+</p>
+<p>
+  <span>Platillo No. 2</span>
+  Texto descriptivo del platillo, información de la región
+</p>
+<p>
+  <span>Platillo No. 3</span>
+  Texto descriptivo del platillo, información de la región
+</p>
+<h4>Especialidades</h4>
+<p>
+  <span>Especialidad No. 1</span>
+  Texto descriptivo del Especialidad, información de la región
+</p>
+<p>
+  <span>Especialidad No. 2</span>
+  Texto descriptivo del Especialidad, información de la región
+</p>
+<p>
+  <span>Especialidad No. 3</span>
+  Texto descriptivo del Especialidad, información de la región
+</p>
+<h2><span>Hotel</span>Mexico en la piel</h2>
