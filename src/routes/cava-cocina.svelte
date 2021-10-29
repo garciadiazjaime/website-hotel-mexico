@@ -117,19 +117,20 @@
     padding: 80px 30px;
     box-sizing: border-box;
     position: relative;
+    margin-bottom: 80px;
   }
   .dark:after {
     content: '';
     background:  radial-gradient(ellipse at center, transparent 0%, transparent 35%, gold 50%, transparent 50%);
     background-size: 15px 15px;
     background-repeat: repeat-x;
-    background-position: 5px center;
-    width: 100vw;
-    height: 12px;
+    background-position: 5px 0;
+    width: 100%;
+    height: 14px;
     border: none;
     position: absolute;
-    bottom: -6px;
-    width: 100%;
+    bottom: -5px;
+    left: 0;
   }
   ol {
     list-style-type: decimal-leading-zero;
@@ -143,15 +144,19 @@
     font-size: 14px;
     color: black;
     margin-top: 0;
+    text-align: left;
   }
   .spec {
     text-transform: uppercase;
+  }
+  .banner-container {
+    padding: 0 40px 80px;
+    box-sizing: border-box;
   }
   .banner {
     background: goldenrod;
     padding: 30px 0;
     display: flex;
-    margin: 0 40px 80px;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
@@ -236,10 +241,12 @@
     </li>
   {/each}
 </ol>
-<div class="banner">
-  <img src="https://picsum.photos/100/100?random=12" alt="" />
-  <p>Degusta en nuestra barra de vinos en grupo,<br>y conoce de la mejor calidad que tiene el Valle de Guadalupe</p>
-  <a href="/reserva">Reserva ahora</a>
+<div class="banner-container">
+  <div class="banner">
+    <img src="https://picsum.photos/100/100?random=12" alt="" />
+    <p>Degusta en nuestra barra de vinos en grupo,<br>y conoce de la mejor calidad que tiene el Valle de Guadalupe</p>
+    <a href="/reserva">Reserva ahora</a>
+  </div>
 </div>
 <Header backgroundImage="https://picsum.photos/1000/400?random=4">
   <div slot="subheader">
