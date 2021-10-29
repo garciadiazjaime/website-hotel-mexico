@@ -1,5 +1,7 @@
 <script>
 	import Nav from '../components/Nav.svelte';
+	import Button from '../components/Button.svelte'
+	import Arrow from '../components/Arrow.svelte'
 </script>
 
 <style>
@@ -67,12 +69,6 @@
 		left: 50%;
 	}
 
-	.placeholder_a {
-		width: 700px;
-		height: 400px;
-		border: 1px solid black;
-	}
-
 	.placeholder_b {
 		width: 500px;
 		height: 700px;
@@ -111,14 +107,47 @@
 
 	.row {
 		display: flex;
+		justify-content: space-between;
 	}
 
-	.row > div:first-of-type {
-		flex-basis: 500px;
+	.col-3 {
+		width: calc(100%/3);
+	}
+
+	.padding1 {
+		padding-top: 150px;
+	}
+
+	h3 {
+		padding-top: 20px;
+		font-size: 30px;
+	}
+
+	h3 span {
+		display: block;
+		padding-left: 40px;
 	}
 
 	.green_background {
 		background-color: darkolivegreen;
+	}
+
+	.width-50 {
+		width: 50%;
+	}
+
+	.padding-top-100 {
+		padding-top: 100px;
+	}
+
+	.arrows {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 40px;
+	}
+
+	.col-4 {
+		width: calc(100%/4);
 	}
 
 	@media (min-width: 480px) {
@@ -158,16 +187,27 @@
 
 <Nav />
 
-<div class="content row">
-	<div>
-		<h3>Regresa a casa</h3>
+<div class="content row padding1">
+	<div class="col-3">
+		<h3>Regresa <span>a casa</span></h3>
 		<p>
 			La calidez de nuestra tierra convertida en un espacio que te abraza, te da la bienvenida y parece que nunca se acaba.
 		</p>
-		<a href="/habitaciones">ver habitaciones</a>
+		<div class="width-50 padding-top-100">
+			<Button href="/habitaciones" className="small-arrow">ver habitaciones</Button>
+		</div>
 	</div>
 	<div>
-		<div class="placeholder_a"></div>
+		<img src="https://via.placeholder.com/750x500" alt="">
+
+		<div class="arrows">
+			<div class="col-4">
+				<Arrow className="left-arrow" />
+			</div>
+			<div class="col-4">
+				<Arrow className="right-arrow" />
+			</div>
+		</div>
 	</div>
 </div>
 
