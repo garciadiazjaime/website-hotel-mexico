@@ -150,6 +150,10 @@
 		background-color: darkolivegreen;
 	}
 
+	.backgroun-light {
+		background-color: gainsboro;
+	}
+
 	.arrows {
 		display: flex;
 		justify-content: space-between;
@@ -193,44 +197,52 @@
 
 <Nav />
 
-<div class="content row padding-top-150">
-	<div class="col-33">
-		<h3 class="col-50">Regresa <span>a casa</span></h3>
-		<p>
-			La calidez de nuestra tierra convertida en un espacio que te abraza, te da la bienvenida y parece que nunca se acaba.
-		</p>
-		<div class="col-50 padding-top-100">
-			<Button href="/habitaciones" className="small-arrow">ver habitaciones</Button>
-		</div>
-	</div>
-	<div>
-		<img src="https://via.placeholder.com/750x500" alt="">
-
-		<div class="arrows">
-			<div class="col-25">
-				<Arrow className="left-arrow" />
+<div class="backgroun-light">
+	<div class="content row padding-top-150">
+		<div class="col-33">
+			<h3 class="col-50">Regresa <span>a casa</span></h3>
+			<p>
+				La calidez de nuestra tierra convertida en un espacio que te abraza, te da la bienvenida y parece que nunca se acaba.
+			</p>
+			<div class="col-50 padding-top-100">
+				<Button href="/habitaciones" className="small-arrow">ver habitaciones</Button>
 			</div>
-			<div class="col-25">
-				<Arrow className="right-arrow" />
+		</div>
+		<div>
+			<img src="https://via.placeholder.com/750x500" alt="">
+
+			<div class="arrows">
+				<div class="col-25">
+					<Arrow className="left-arrow" />
+				</div>
+				<div class="col-25">
+					<Arrow className="right-arrow" />
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="content">
-	<div class="row padding-top-200">
-		<div>
-			<img src="https://via.placeholder.com/600x800" alt="">
-		</div>
-		<div class="col-50">
-			<h3 class="padding-top-100 col-75">El Hotel de México, <span>y el vino</span></h3>
-			<p class="padding-top-50">Arquitectura que emerge de la tierra y se fusionan con su entorno, 13 “casas” que rinden homenaje a nuestro México, habitaciones con jacuzzi privado y una ubicación inigualable entre viñedos, áreas rocosas y un sorprendente bosque de encinos, distintas atmósferas dispuestas para emular de manera natural el territorio mexicano; una extensión de 15 hectáreas en donde espacios íntimos y de descanso convergen con espacios de celebración.</p>
-			<p class="col-50">Te invitamos a celebrar nuestra cultura y disfrutar de nuestra tierra.</p>
-			<div class="col-50 padding-top-100">
-				<Button href="/reserva" className="large-arrow">reserva ahora</Button>
+<div class="backgroun-light">
+	<div class="content">
+		<div class="row padding-top-200">
+			<div>
+				<img src="https://via.placeholder.com/600x800" alt="">
+			</div>
+			<div class="col-50">
+				<h3 class="padding-top-100 col-75">El Hotel de México, <span>y el vino</span></h3>
+				<p class="padding-top-50">Arquitectura que emerge de la tierra y se fusionan con su entorno, 13 “casas” que rinden homenaje a nuestro México, habitaciones con jacuzzi privado y una ubicación inigualable entre viñedos, áreas rocosas y un sorprendente bosque de encinos, distintas atmósferas dispuestas para emular de manera natural el territorio mexicano; una extensión de 15 hectáreas en donde espacios íntimos y de descanso convergen con espacios de celebración.</p>
+				<p class="col-50">Te invitamos a celebrar nuestra cultura y disfrutar de nuestra tierra.</p>
+				<div class="col-50 padding-top-100">
+					<Button href="/reserva" className="large-arrow">reserva ahora</Button>
+				</div>
 			</div>
 		</div>
 	</div>
+</div>
+
+<div class="backgroun-light">
+	<div class="padding-top-100"></div>
 </div>
 
 <div class="content">
