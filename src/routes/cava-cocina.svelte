@@ -85,6 +85,7 @@
     font-size: 16px;
     text-align: center;
     margin-top: 60px;
+    margin-bottom: 60px;
   }
   .menu {
     text-align: center;
@@ -110,7 +111,7 @@
   .large-p {
     font-size: 22px;
     text-align: center;
-    padding: 60px 150px 80px;
+    padding: 0 150px 80px;
   }
   .dark {
     background-color: lightgray;
