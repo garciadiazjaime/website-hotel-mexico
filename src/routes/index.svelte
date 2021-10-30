@@ -69,12 +69,6 @@
 		left: 50%;
 	}
 
-	.placeholder_d {
-		width: 800px;
-		height: 400px;
-		border: 1px solid black;
-	}
-
 	.placeholder_e {
 		width: 400px;
 		height: 200px;
@@ -98,6 +92,10 @@
 		justify-content: space-between;
 	}
 
+	.col-20 {
+		width: 20%;
+	}
+
 	.col-25 {
 		width: 25%;
 	}
@@ -118,8 +116,16 @@
 		width: 75%;
 	}
 
+	.padding-top-bottom-30 {
+		padding: 30px 0;
+	}
+
 	.padding-top-50 {
 		padding-top: 50px;
+	}
+
+	.padding-top-70 {
+		padding-top: 70px;
 	}
 
 	.padding-top-100 {
@@ -365,12 +371,26 @@
 	<div class="chevron-arrow-down position-relative margin-right"></div>
 </div>
 
+<div class="padding-top-200"></div>
 <div class="green_background">
 	<div class="content">
-		<div class="row">
-			<div class="placeholder_d"></div>
-			<div>
-				Naturaleza
+		<div class="row padding-top-bottom-30">
+			<img src="https://via.placeholder.com/900x600" alt="">
+			<div class="col-20">
+				<h3 class="padding-top-70">Naturaleza</h3>
+
+				<img class="padding-top-100" src="https://via.placeholder.com/60x60" alt="">
+
+				<div class="padding-top-200">
+					<div class="arrows">
+						<div class="col-25">
+							<Arrow className="left-arrow" />
+						</div>
+						<div class="col-25">
+							<Arrow className="right-arrow" />
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
