@@ -34,28 +34,5 @@
     top: 0;
     text-decoration: none;
   }
-  .icon {
-    position: relative;
-  }
-  .icon:before, .icon:after {
-		content: '';
-    border: 1px solid transparent;
-		border-right: 1px solid white;
-		border-bottom: 1px solid white;
-		transform: rotate(45deg) translateX(-50%);
-		position: absolute;
-		left: 50%;
-		border-radius: 3px;
-	}
-  .icon:before {
-		width: 30px;
-		height: 30px;
-		bottom: 0;
-	}
-	.icon:after {
-		width: 24px;
-		height: 24px;
-		bottom: 8px;
-	}
 
 </style>
