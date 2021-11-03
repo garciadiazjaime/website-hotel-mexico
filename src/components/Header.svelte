@@ -1,15 +1,15 @@
 <script>
   export let backgroundImage;
+  export let bannerHeight = 390;
 </script>
 <style>
   .main {
     background-size: cover;
     background-position: center;
-    height: 390px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 40px;
+    justify-content: space-between;
+    padding: 40px 80px;
     box-sizing: border-box;
 
   }
@@ -21,9 +21,9 @@
     padding-left: 170px;
   }
   .subheader {
-    display: flex;
     align-self: flex-start;
     width: 100%;
+    position: relative;
   }
   .icon {
     display: flex;
@@ -32,10 +32,12 @@
   }
 </style>
 
-<div class="main" style="background-image: url({backgroundImage});">
+<div class="main" style="background-image: url({backgroundImage}); height: {bannerHeight}px">
   <div class="subheader">
     <slot name='subheader'></slot>
   </div>
   <h1><slot name="title"></slot></h1>
-  <div class="icon"><slot name="icon"></slot></div>
+  <div class="icon" style="text-align: cehter;">
+    <slot name="icon"></slot>
+  </div>
 </div>
