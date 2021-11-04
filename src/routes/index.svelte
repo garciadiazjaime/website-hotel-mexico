@@ -169,7 +169,7 @@
 	
 	.cover {
 		position: relative;
-		height: 90%;
+		height: 100%;
 	}
 
 	.banner {
@@ -202,16 +202,6 @@
 		margin-left: 110px;
 	}
 
-	@media (max-width: 480px) {
-		h1 {
-			padding-left: 20px;
-			font-size: 40px;
-		}
-		.title span {
-			margin-left: 20px;
-		}
-	}
-
 	.header {
 		display: flex;
 		justify-content: space-between;
@@ -231,18 +221,6 @@
 	.header h2 {
 		font-family: trento;
 		font-size: 4px;
-	}
-
-	.placeholder_f {
-		width: 400px;
-		height: 100px;
-		border: 1px solid black;
-	}
-
-	.placeholder_g {
-		width: 50px;
-		height: 150px;
-		border: 1px solid black;
 	}
 
 	.row {
@@ -374,67 +352,6 @@
 	.position-relative {
 		position: relative;
 	}
-
-	.chevron-arrow-up::before {
-		content: '';
-		display: inline-block;
-		border-right: 1px solid var(--color-almendra);
-		border-bottom: 1px solid var(--color-almendra);
-		width: 16px;
-		height: 16px;
-		transform: rotate(225deg);
-	}
-
-	.chevron-arrow-up::after {
-		content: '';
-		display: inline-block;
-		border-right: 1px solid var(--color-almendra);
-		border-bottom: 1px solid var(--color-almendra);
-		width: 16px;
-		height: 16px;
-		transform: rotate(225deg);
-		position: absolute;
-		top: 6px;
-		left: 0;
-	}
-
-	.chevron-arrow-down::before {
-		content: '';
-		display: inline-block;
-		border-right: 1px solid var(--color-almendra);
-		border-bottom: 1px solid var(--color-almendra);
-		width: 16px;
-		height: 16px;
-		transform: rotate(45deg);
-		position: relative;
-		top: -10px;
-		left: 0;
-	}
-
-	.chevron-arrow-down::after {
-		content: '';
-		display: inline-block;
-		border-right: 1px solid var(--color-almendra);
-		border-bottom: 1px solid var(--color-almendra);
-		width: 16px;
-		height: 16px;
-		transform: rotate(45deg);
-		position: absolute;
-		top: -4px;
-		left: 0;
-	}
-
-	.display-flex {
-		display: flex;
-	}
-
-	.margin-right {
-		margin-right: 15px;
-	}
-
-	.justify-contet-center {
-		justify-content: center;
-	}
 	
 	.over-image {
 		width: 200px;
@@ -447,17 +364,17 @@
 		text-align: center;
 	}
 
-	.block-center {
-		margin: 0 auto;
-	}
-
 	.slide {
 		position: relative;
 	}
 
 	.chevron-wrapper {
+		background: url(/support/chevron.svg) repeat-x;
+		height: 13px;
+		width: 805px;
+		margin: 0 auto;
 		position: relative;
-		top: 16px;
+		top: 7px;
 	}
 
 	.slide h4 {
@@ -530,6 +447,53 @@
 		width: 25px;
 		margin-right: 6px;
 	}
+
+	@media (max-width: 480px) {
+		.content {
+			padding: 12px;
+		}
+		.padding-left-60 {
+			padding-left: 0;
+		}
+		h1 {
+			padding-left: 20px;
+			font-size: 40px;
+		}
+		.title span {
+			margin-left: 20px;
+		}
+		.chevron-wrapper {
+			width: 100%;
+		}
+		.flex {
+			display: block;
+		}
+		.brand {
+			font-size: 10px;
+		}
+		.signature {
+			font-size: 50px;
+			top: 0;
+		}
+		.col-33 {
+			width: auto;
+		}
+		.col-30 {
+			width: auto;
+		}
+		.row {
+			display: block;
+		}
+		.col-50 {
+			width: auto;
+		}
+		.carousel {
+			padding-top: 100px;
+		}
+		h3 .span {
+			text-align: initial;
+		}
+	}
 </style>
 
 <svelte:head>
@@ -568,7 +532,7 @@
 					<Button href="/habitaciones" className="small-arrow">ver habitaciones</Button>
 				</div>
 			</div>
-			<div>
+			<div class="carousel">
 				<div class="slide">
 					<img src="/homepage/carousel_a/image_a.jpg" alt="">
 					<h4>CASA</h4>
@@ -636,31 +600,8 @@
 
 
 <div class="content">
-	<div class="padding-top-200 display-flex justify-contet-center chevron-wrapper">
-		<div class="chevron-arrow-up position-relative margin-right"></div>
-		<div class="chevron-arrow-down position-relative margin-right"></div>
-		<div class="chevron-arrow-up position-relative margin-right"></div>
-		<div class="chevron-arrow-down position-relative margin-right"></div>
-		<div class="chevron-arrow-up position-relative margin-right"></div>
-		<div class="chevron-arrow-down position-relative margin-right"></div>
-		<div class="chevron-arrow-up position-relative margin-right"></div>
-		<div class="chevron-arrow-down position-relative margin-right"></div>
-		<div class="chevron-arrow-up position-relative margin-right"></div>
-		<div class="chevron-arrow-down position-relative margin-right"></div>
-		<div class="chevron-arrow-up position-relative margin-right"></div>
-		<div class="chevron-arrow-down position-relative margin-right"></div>
-		<div class="chevron-arrow-up position-relative margin-right"></div>
-		<div class="chevron-arrow-down position-relative margin-right"></div>
-		<div class="chevron-arrow-up position-relative margin-right"></div>
-		<div class="chevron-arrow-down position-relative margin-right"></div>
-		<div class="chevron-arrow-up position-relative margin-right"></div>
-		<div class="chevron-arrow-down position-relative margin-right"></div>
-		<div class="chevron-arrow-up position-relative margin-right"></div>
-		<div class="chevron-arrow-down position-relative margin-right"></div>
-		<div class="chevron-arrow-up position-relative margin-right"></div>
-		<div class="chevron-arrow-down position-relative margin-right"></div>
-		<div class="chevron-arrow-up position-relative margin-right"></div>
-		<div class="chevron-arrow-down position-relative margin-right"></div>
+	<div class="padding-top-200">
+		<div class="chevron-wrapper"></div>
 	</div>
 </div>
 
@@ -692,24 +633,26 @@
 </div>
 
 
-<div class="content padding-top-100 text-center col-33">
-	<p class="text-center strong">HOTEL</p>
+<div class="backgroun-light">
+	<div class="content padding-top-100 text-center col-33">
+		<p class="text-center strong">HOTEL</p>
 
-	<div class="brand padding-top-30">México</div>
-	<div class="signature">en la Piel</div>
+		<div class="brand padding-top-30">México</div>
+		<div class="signature">en la Piel</div>
 
-	<p class="text-center strong">VALLE DE GUADALUPE</p>
+		<p class="text-center strong">VALLE DE GUADALUPE</p>
 
-	<br />
+		<br />
 
-	<p class="text-center padding-top-100">
-		Excelencia en cada detalle para que puedas disfrutar del Valle de Guadalupe en todas sus expresiones, desde su clima mediterráneo y sus paisajes espectaculares hasta el sabor de su comida y sus vinos más selectos.
-	</p>
-	<p class="text-center">
-		Una experiencia exclusiva y reconfortante, para celebrar el amor por México y el Valle de Guadalupe.
-	</p>
+		<p class="text-center padding-top-100">
+			Excelencia en cada detalle para que puedas disfrutar del Valle de Guadalupe en todas sus expresiones, desde su clima mediterráneo y sus paisajes espectaculares hasta el sabor de su comida y sus vinos más selectos.
+		</p>
+		<p class="text-center">
+			Una experiencia exclusiva y reconfortante, para celebrar el amor por México y el Valle de Guadalupe.
+		</p>
+	</div>
+	<div class="padding-top-100"></div>
 </div>
-<div class="padding-top-100"></div>
 
 
 <div class="green-background">
