@@ -7,18 +7,23 @@
 
 <style>
   a {
-    display: block;
+    display: inline-block;
     color: white;
-    background: darkolivegreen;
+    background: var(--color-verde);
     text-decoration: none;
     text-transform: uppercase;
     position: relative;
+    font-family: gotham;
+    font-size: 14px;
+    line-height: 14px;
   }
   .small-arrow {
-    padding: 18px 15px;
+    padding: 27px 54px 27px 20px;
   }
   .large-arrow {
-    padding: 18px 120px 18px 15px;
+    padding: 27px 120px 27px 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .large-arrow:before {
@@ -26,7 +31,7 @@
     width: 60px;
     background-color: white;
     height: 1px;
-    top: 50%;
+    top: 32px;
     display: block;
     right: 20px;
     position: absolute;
@@ -38,7 +43,7 @@
     border-right: 1px solid white;
     transform: rotate(45deg) translateY(-50%);
     height: 7px;
-    top: 50%;
+    top: 32px;
     display: block;
     right: 23px;
     position: absolute;

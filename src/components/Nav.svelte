@@ -4,7 +4,7 @@
 
 <style>
 	header {
-		background-color: darkolivegreen;
+		background-color: var(--color-verde);
 		color: white;
 	}
 
@@ -51,6 +51,9 @@
 		padding: 20px 40px;
 		display: block;
 		text-transform: uppercase;
+		font-family: gotham;
+		font-size: 14px;
+		font-weight: 400;
 	}
 
 	a:last-of-type {
@@ -58,25 +61,27 @@
 	}
 
 	.content {
-		max-width: 1328px;
+		max-width: 1280px;
 		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
+		padding: 0 50px;
 	}
 
 	.logo {
 		margin: auto 0;
 	}
 
-	img {
+	.logo img {
 		display: block;
+		height: 40px;
 	}
 </style>
 
 <header>
 	<div class="content">
 		<div class="logo">
-			<img src="https://via.placeholder.com/25x40" alt="">
+			<img src="/support/logo-mini.svg" alt="">
 		</div>
 		<nav>
 			<ul>

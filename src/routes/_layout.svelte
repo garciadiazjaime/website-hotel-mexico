@@ -5,6 +5,9 @@
 </script>
 
 <style>
+	:global(html,body,#sapper,main) {
+		height: 100%;
+	}
 	main {
 		box-sizing: border-box;
 	}
