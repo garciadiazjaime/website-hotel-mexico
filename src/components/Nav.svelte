@@ -1,5 +1,11 @@
 <script>
+	import { onMount } from 'svelte';
+
 	export let segment;
+
+	onMount(async () => {
+		
+	});
 </script>
 
 <style>
@@ -66,6 +72,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 0 50px;
+		box-sizing: border-box;
 	}
 
 	.logo {
