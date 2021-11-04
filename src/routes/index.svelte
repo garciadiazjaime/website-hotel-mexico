@@ -268,10 +268,6 @@
 		padding: 30px;
 	}
 
-	.padding-top-10 {
-		padding-top: 10px;
-	}
-
 	.padding-top-30 {
 		padding-top: 30px;
 	}
@@ -471,9 +467,9 @@
 		.brand {
 			font-size: 10px;
 		}
-		.signature {
+		.signature.color-blanco {
 			font-size: 50px;
-			top: 0;
+			top: -20px;
 		}
 		.col-33 {
 			width: auto;
@@ -490,8 +486,11 @@
 		.carousel {
 			padding-top: 100px;
 		}
-		h3 .span {
+		h3 span {
 			text-align: initial;
+		}
+		ul {
+			margin-bottom: 200px;
 		}
 	}
 </style>
