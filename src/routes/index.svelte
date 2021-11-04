@@ -112,6 +112,14 @@
 		font-style: normal;
 	}
 
+
+	@font-face {
+		font-family: "august";
+		src: url("/fonts/august/august.ttf");
+		font-weight: 600;
+		font-style: normal;
+	}
+
 	:root {
 		--color-verde: #132F19;
 		--color-almendra: #BAA57D;
@@ -121,7 +129,15 @@
 	}
 
 	.color-verde {
-		color: var(--color-verde)
+		color: var(--color-verde);
+	}
+
+	.color-almendra {
+		color: var(--color-almendra);
+	}
+
+	.color-blanco {
+		color: white;
 	}
 
 	.font-gotham {
@@ -139,6 +155,10 @@
 		max-width: 100%;
 		height: auto;
 		display: block;
+	}
+
+	a {
+		text-decoration: none;
 	}
 
 	.content {
@@ -270,6 +290,10 @@
 		padding: 30px;
 	}
 
+	.padding-top-10 {
+		padding-top: 10px;
+	}
+
 	.padding-top-30 {
 		padding-top: 30px;
 	}
@@ -319,6 +343,18 @@
 		color: var(--color-verde);
 		font-family: gotham;
 		text-align: justify;
+	}
+
+	p.strong {
+		font-weight: 600;
+	}
+
+	p.border-bottom {
+		border-bottom: 1px solid;
+	}
+	
+	.uppercase {
+		text-transform: uppercase;
 	}
 
 	.green-background {
@@ -453,6 +489,46 @@
 
 	.icon-b {
 		width: 44px;
+	}
+
+	.brand {
+		font-family: trento;
+	}
+
+	.signature {
+		font-family: august;
+		font-size: 80px;
+		color: var(--color-almendra);
+		position: relative;
+		top: -20px;
+	}
+
+	.signature.color-blanco {
+		color: white;
+		font-size: 40px;
+		position: relative;
+		top: -37px;
+	}
+
+	.logo-r {
+		width: 60px;
+	}
+
+	.link-map {
+		display: inline-block;
+		margin-right: 20px;
+		position: relative;
+		top: -7px;
+		border-bottom: 1px solid;
+	}
+
+	.social-media {
+		display: inline-flex;
+	}
+
+	.social-media img {
+		width: 25px;
+		margin-right: 6px;
 	}
 </style>
 
@@ -614,3 +690,57 @@
 		</div>
 	</div>
 </div>
+
+
+<div class="content padding-top-100 text-center col-33">
+	<p class="text-center strong">HOTEL</p>
+
+	<div class="brand padding-top-30">México</div>
+	<div class="signature">en la Piel</div>
+
+	<p class="text-center strong">VALLE DE GUADALUPE</p>
+
+	<br />
+
+	<p class="text-center padding-top-100">
+		Excelencia en cada detalle para que puedas disfrutar del Valle de Guadalupe en todas sus expresiones, desde su clima mediterráneo y sus paisajes espectaculares hasta el sabor de su comida y sus vinos más selectos.
+	</p>
+	<p class="text-center">
+		Una experiencia exclusiva y reconfortante, para celebrar el amor por México y el Valle de Guadalupe.
+	</p>
+</div>
+<div class="padding-top-100"></div>
+
+
+<div class="green-background">
+	<div class="content">
+		<div class="row padding-top-100">
+			<div>
+				<p class="color-almendra">El hotel de</p>
+				<div class="signature color-blanco">México y el Vino</div>
+				<p class="uppercase color-almendra border-bottom">HOTEL MÉXICO EN LA PIEL &#169;2021</p>
+			</div>
+			<div class="padding-top-30">
+				<img src="/support/logo-r.svg" alt="" class="logo-r">
+			</div>
+			<div>
+				<p class="color-almendra">
+					hola@hotelmexicoenlapiel.com
+					<br />
+					<span class="uppercase">VALLE DE GUADALUPE, BC, MX.</span>
+				</p>
+				<p class="color-almendra padding-top-50">
+					<a class="link-map" href="https://www.google.com/maps">Google Maps</a>
+					<span class="social-media">
+						<img src="/support/yelp.svg" alt="">
+						<img src="/support/tripadvisor.svg" alt="">
+						<img src="/support/facebook.svg" alt="">
+						<img src="/support/instagram.svg" alt="">
+					</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="padding-top-100"></div>
+</div>
+
