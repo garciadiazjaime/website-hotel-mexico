@@ -128,20 +128,12 @@
 		--color-background: #F1F1EF;
 	}
 
-	.color-verde {
-		color: var(--color-verde);
-	}
-
 	.color-almendra {
 		color: var(--color-almendra);
 	}
 
 	.color-blanco {
 		color: white;
-	}
-
-	.font-gotham {
-		font-family: gotham;
 	}
 
 	h1 {
@@ -161,11 +153,23 @@
 		text-decoration: none;
 	}
 
+	p {
+		margin: 0;
+	}
+
+	h1, h2, h3, h4, ul {
+		margin: 0;
+	}
+
 	.content {
 		max-width: 1280px;
 		margin: 0 auto;
-		padding: 0 50px;
+		padding: 0 140px;
 		box-sizing: border-box;
+	}
+
+	.smaller-text {
+		font-size: 13px;
 	}
 	
 	.cover {
@@ -241,28 +245,32 @@
 		width: 25%;
 	}
 
-	.col-30 {
-		width: 30%;
-	}
-
-	.col-33 {
-		width: calc(100%/3);
+	.col-40 {
+		width: 40%;
 	}
 
 	.col-50 {
 		width: 50%;
 	}
 
-	.col-60 {
-		width: 60%;
+	.col-58 {
+		width: 58%;
 	}
 
 	.col-75 {
 		width: 75%;
 	}
 
+	.col-80 {
+		width: 80%;
+	}
+
 	.col-100 {
 		width: 100%;
+	}
+
+	.col-382 {
+		width: 382px;
 	}
 
 	.padding-top-bottom-30 {
@@ -302,7 +310,6 @@
 	}
 
 	h3 {
-		padding-top: 40px;
 		font-size: 50px;
 		color: var(--color-almendra);
 		font-family: mirage;
@@ -311,13 +318,12 @@
 
 	h3 span {
 		display: block;
-		text-align: right;
+		padding-left: 80px;
 	}
 
 	p {
 		color: var(--color-verde);
 		font-family: gotham;
-		text-align: justify;
 	}
 
 	p.strong {
@@ -330,6 +336,10 @@
 	
 	.uppercase {
 		text-transform: uppercase;
+	}
+
+	.text-align-right {
+		text-align: right;
 	}
 
 	.green-background {
@@ -361,6 +371,14 @@
 		text-align: center;
 	}
 
+	.text-right {
+		text-align: right;
+	}
+
+	.block-center {
+		margin: 0 auto;
+	}
+
 	.slide {
 		position: relative;
 	}
@@ -368,7 +386,6 @@
 	.chevron-wrapper {
 		background: url(/support/chevron.svg) repeat-x;
 		height: 13px;
-		width: 805px;
 		margin: 0 auto;
 		position: relative;
 		top: 7px;
@@ -397,8 +414,8 @@
 	li {
 		color: var(--color-almendra);
 		font-family: gotham;
-		font-size: 23px;
-		margin: 12px 0;
+		font-size: 14px;
+		margin: 12px 0 0;
 	}
 
 	.icon-b {
@@ -419,9 +436,9 @@
 
 	.signature.color-blanco {
 		color: white;
-		font-size: 40px;
+		font-size: 36px;
 		position: relative;
-		top: -37px;
+		top: -16px;
 	}
 
 	.logo-r {
@@ -523,8 +540,8 @@
 <div class="backgroun-light">
 	<div class="content">
 		<div class="row padding-top-150">
-			<div class="col-30">
-				<h3 class="col-50">Regresa <span>a casa</span></h3>
+			<div class="col-382">
+				<h3>Regresa <span>a casa</span></h3>
 				<p class="padding-top-30">
 					La calidez de nuestra tierra convertida en un espacio que te abraza, te da la bienvenida y parece que nunca se acaba.
 				</p>
@@ -560,9 +577,10 @@
 				<img src="/homepage/copas_y_vino.jpg" alt="">
 			</div>
 			<div class="col-50">
-				<h3 class="padding-top-80 col-75">El Hotel de México, <span>y el vino</span></h3>
+				<h3>El Hotel de México, <span class="text-align-right">y el vino</span></h3>
 				<p class="padding-top-50">Arquitectura que emerge de la tierra y se fusionan con su entorno, 13 “casas” que rinden homenaje a nuestro México, habitaciones con jacuzzi privado y una ubicación inigualable entre viñedos, áreas rocosas y un sorprendente bosque de encinos, distintas atmósferas dispuestas para emular de manera natural el territorio mexicano; una extensión de 15 hectáreas en donde espacios íntimos y de descanso convergen con espacios de celebración.</p>
-				<p class="col-50">Te invitamos a celebrar nuestra cultura y disfrutar de nuestra tierra.</p>
+				<br />
+				<p class="col-75">Te invitamos a celebrar nuestra cultura y disfrutar de nuestra tierra.</p>
 				<div class="padding-top-100">
 					<Button href="/reserva" className="large-arrow">reserva ahora</Button>
 				</div>
@@ -581,8 +599,9 @@
 
 	<div class="row padding-top-100">
 		<div class="col-50">
-			<p class="col-75">Una experiencia exclusiva que le permitirá a cada uno de nuestros huéspedes explorar con todos sus sentidos los sabores de México, la riqueza de su tierra y sentir a flor de piel nuestra pasión por la cultura mexicana.</p>
-			<ul class="padding-top-50">
+			<p class="col-80">Una experiencia exclusiva que le permitirá a cada uno de nuestros huéspedes explorar con todos sus sentidos los sabores de México, la riqueza de su tierra y sentir a flor de piel nuestra pasión por la cultura mexicana.</p>
+			<br />
+			<ul>
 				<li>Espacios privados</li>
 				<li>Casas con jacuzzi</li>
 				<li>Servicio a cuarto</li>
@@ -600,21 +619,21 @@
 
 
 <div class="content">
-	<div class="padding-top-200">
+	<div class="padding-top-100">
 		<div class="chevron-wrapper"></div>
 	</div>
 </div>
 
 
-<div class="backgroun-light padding-top-200">
+<div class="backgroun-light padding-top-150">
 	<div class="content">
 		<div class="green-background">
 			<div class="flex padding-top-bottom-30">
 				<img src="/homepage/carousel_b/image_a.jpg" alt="">
 				<div class="padding-left-60 col-100">
-					<h3 class="padding-top-100">Naturaleza</h3>
+					<h3 class="padding-top-50">Naturaleza</h3>
 
-					<img class="padding-top-100 icon-b" src="/support/icon-b.svg" alt="">
+					<img class="padding-top-50 icon-b" src="/support/icon-b.svg" alt="">
 
 					<div class="padding-top-180">
 						<div class="arrows">
@@ -634,7 +653,7 @@
 
 
 <div class="backgroun-light">
-	<div class="content padding-top-100 text-center col-33">
+	<div class="content padding-top-100 text-center">
 		<p class="text-center strong">HOTEL</p>
 
 		<div class="brand padding-top-30">México</div>
@@ -644,10 +663,11 @@
 
 		<br />
 
-		<p class="text-center padding-top-100">
+		<p class="padding-top-100 col-58 block-center">
 			Excelencia en cada detalle para que puedas disfrutar del Valle de Guadalupe en todas sus expresiones, desde su clima mediterráneo y sus paisajes espectaculares hasta el sabor de su comida y sus vinos más selectos.
 		</p>
-		<p class="text-center">
+		<br />
+		<p class="text-center col-40 block-center">
 			Una experiencia exclusiva y reconfortante, para celebrar el amor por México y el Valle de Guadalupe.
 		</p>
 	</div>
@@ -661,18 +681,19 @@
 			<div>
 				<p class="color-almendra">El hotel de</p>
 				<div class="signature color-blanco">México y el Vino</div>
-				<p class="uppercase color-almendra border-bottom">HOTEL MÉXICO EN LA PIEL &#169;2021</p>
+				<p class="uppercase color-almendra border-bottom padding-top-50">HOTEL MÉXICO EN LA PIEL &#169;2021</p>
 			</div>
 			<div class="padding-top-30">
 				<img src="/support/logo-r.svg" alt="" class="logo-r">
 			</div>
 			<div>
-				<p class="color-almendra">
+				<p class="color-almendra text-right">
 					hola@hotelmexicoenlapiel.com
-					<br />
-					<span class="uppercase">VALLE DE GUADALUPE, BC, MX.</span>
 				</p>
-				<p class="color-almendra padding-top-50">
+				<p class="color-almendra uppercase smaller-text text-right">
+					VALLE DE GUADALUPE, BC, MX.
+				</p>
+				<p class="color-almendra padding-top-80">
 					<a class="link-map" href="https://www.google.com/maps">Google Maps</a>
 					<span class="social-media">
 						<img src="/support/yelp.svg" alt="">

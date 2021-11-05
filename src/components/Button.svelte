@@ -18,10 +18,10 @@
     line-height: 14px;
   }
   .small-arrow {
-    padding: 27px 54px 27px 20px;
+    padding: 18px 42px 18px 20px;
   }
   .large-arrow {
-    padding: 27px 120px 27px 20px;
+    padding: 18px 120px 18px 20px;
     width: 100%;
     box-sizing: border-box;
   }
@@ -31,7 +31,7 @@
     width: 60px;
     background-color: white;
     height: 1px;
-    top: 32px;
+    top: 23px;
     display: block;
     right: 20px;
     position: absolute;
@@ -43,7 +43,7 @@
     border-right: 1px solid white;
     transform: rotate(45deg) translateY(-50%);
     height: 7px;
-    top: 32px;
+    top: 23px;
     display: block;
     right: 23px;
     position: absolute;
