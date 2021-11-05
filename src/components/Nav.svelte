@@ -2,22 +2,35 @@
 	import { onMount } from 'svelte';
 
 	export let segment;
+	let isFixed = false;
 
-	onMount(async () => {
-		
-	});
+	onMount(() => {
+		const element = document.querySelector('.banner');
+		const handleIntersection = (entries) => {
+			for (let entry of entries) {
+				isFixed = !entry.isIntersecting
+			}
+		}
+
+		const observer = new IntersectionObserver(handleIntersection);
+		observer.observe(element);
+	})
+
 </script>
 
 <style>
 	header {
 		background-color: var(--color-verde);
 		color: white;
+		z-index: 1;
+		width: 100%;
 	}
 
  	nav {
 		font-weight: 300;
 		display: flex;
 		justify-content: space-between;
+		background-color: var(--color-verde);
 	}
 
 	ul {
@@ -83,9 +96,14 @@
 		display: block;
 		height: 40px;
 	}
+
+	.fixed {
+		position: fixed;
+		top: 0px;
+	}
 </style>
 
-<header>
+<header class={isFixed ? 'fixed' : ''}>
 	<div class="content">
 		<div class="logo">
 			<img src="/support/logo-mini.svg" alt="">
