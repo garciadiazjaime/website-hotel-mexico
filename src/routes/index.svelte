@@ -161,6 +161,17 @@
 		margin: 0;
 	}
 
+	ul {
+		padding-left: 12px;
+	}
+
+	.content-menu {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 50px;
+		box-sizing: border-box;
+	}
+
 	.content {
 		max-width: 1280px;
 		margin: 0 auto;
@@ -257,6 +268,10 @@
 		width: 58%;
 	}
 
+	.col-70 {
+		width: 70%;
+	}
+
 	.col-75 {
 		width: 75%;
 	}
@@ -277,12 +292,24 @@
 		padding: 30px;
 	}
 
+	.padding-top-10 {
+		padding-top: 10px;
+	}
+
+	.padding-top-20 {
+		padding-top: 20px;
+	}
+
 	.padding-top-30 {
 		padding-top: 30px;
 	}
 
 	.padding-top-50 {
 		padding-top: 50px;
+	}
+
+	.padding-top-70 {
+		padding-top: 70px;
 	}
 
 	.padding-top-80 {
@@ -314,6 +341,7 @@
 		color: var(--color-almendra);
 		font-family: mirage;
 		font-weight: 200;
+		line-height: 50px;
 	}
 
 	h3 span {
@@ -332,6 +360,16 @@
 
 	p.border-bottom {
 		border-bottom: 1px solid;
+	}
+
+	.image-mask {
+		background-color: black;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.1;
 	}
 	
 	.uppercase {
@@ -415,7 +453,7 @@
 		color: var(--color-almendra);
 		font-family: gotham;
 		font-size: 14px;
-		margin: 12px 0 0;
+		margin: 6px 0 0;
 	}
 
 	.icon-b {
@@ -462,6 +500,11 @@
 		margin-right: 6px;
 	}
 
+	.image-b-mask {
+		max-height: 510px;
+		overflow: hidden;
+	}
+
 	@media (max-width: 480px) {
 		.content {
 			padding: 12px;
@@ -472,6 +515,13 @@
 		h1 {
 			padding-left: 20px;
 			font-size: 40px;
+		}
+		h3 {
+			margin-top: 20px;
+			font-size: 42px;
+		}
+		h3 span {
+			padding-left: initial;
 		}
 		.title span {
 			margin-left: 20px;
@@ -488,12 +538,6 @@
 		.signature.color-blanco {
 			font-size: 50px;
 			top: -20px;
-		}
-		.col-33 {
-			width: auto;
-		}
-		.col-30 {
-			width: auto;
 		}
 		.row {
 			display: block;
@@ -521,10 +565,10 @@
 <div class="cover">
 	<div class="banner"></div>
 	<div class="top">
-		<div class="content col-100">
+		<div class="content-menu col-100">
 			<div class="header">
 				<h2>HOTEL MÉXICO EN LA PIEL <span>®</span></h2>
-				<div>RESERVA</div>
+				<div><a href="http://www.airbnb.com/p/hotelmexicoenlapiel" target="_blank">RESERVA</a></div>
 			</div>
 
 			<div class="title">
@@ -542,7 +586,7 @@
 		<div class="row padding-top-150">
 			<div class="col-382">
 				<h3>Regresa <span>a casa</span></h3>
-				<p class="padding-top-30">
+				<p class="padding-top-30 col-70">
 					La calidez de nuestra tierra convertida en un espacio que te abraza, te da la bienvenida y parece que nunca se acaba.
 				</p>
 				<div class="padding-top-80">
@@ -552,6 +596,7 @@
 			<div class="carousel">
 				<div class="slide">
 					<img src="/homepage/carousel_a/image_a.jpg" alt="">
+					<div class="image-mask"></div>
 					<h4>CASA</h4>
 					<strong>CHIHUAHUA</strong>
 				</div>
@@ -573,7 +618,7 @@
 <div class="backgroun-light">
 	<div class="content">
 		<div class="row padding-top-200">
-			<div>
+			<div class="image-b-mask">
 				<img src="/homepage/copas_y_vino.jpg" alt="">
 			</div>
 			<div class="col-50">
@@ -582,7 +627,7 @@
 				<br />
 				<p class="col-75">Te invitamos a celebrar nuestra cultura y disfrutar de nuestra tierra.</p>
 				<div class="padding-top-100">
-					<Button href="/reserva" className="large-arrow">reserva ahora</Button>
+					<Button href="http://www.airbnb.com/p/hotelmexicoenlapiel" className="large-arrow" target="_blank">reserva ahora</Button>
 				</div>
 			</div>
 		</div>
@@ -597,7 +642,7 @@
 <div class="content padding-top-100">
 	<h3 class="col-60">Despertar con todo <span>México ante tus ojos.</span></h3>
 
-	<div class="row padding-top-100">
+	<div class="row padding-top-70">
 		<div class="col-50">
 			<p class="col-80">Una experiencia exclusiva que le permitirá a cada uno de nuestros huéspedes explorar con todos sus sentidos los sabores de México, la riqueza de su tierra y sentir a flor de piel nuestra pasión por la cultura mexicana.</p>
 			<br />
@@ -663,7 +708,9 @@
 
 		<br />
 
-		<p class="padding-top-100 col-58 block-center">
+		<img class="block-center padding-top-20" src="/support/icon-c.png" alt="">
+
+		<p class="padding-top-50 col-58 block-center">
 			Excelencia en cada detalle para que puedas disfrutar del Valle de Guadalupe en todas sus expresiones, desde su clima mediterráneo y sus paisajes espectaculares hasta el sabor de su comida y sus vinos más selectos.
 		</p>
 		<br />
@@ -676,14 +723,14 @@
 
 
 <div class="green-background">
-	<div class="content">
-		<div class="row padding-top-100">
+	<div class="content-menu">
+		<div class="row padding-top-50">
 			<div>
 				<p class="color-almendra">El hotel de</p>
 				<div class="signature color-blanco">México y el Vino</div>
-				<p class="uppercase color-almendra border-bottom padding-top-50">HOTEL MÉXICO EN LA PIEL &#169;2021</p>
+				<p class="uppercase color-almendra border-bottom padding-top-20">HOTEL MÉXICO EN LA PIEL &#169;2021</p>
 			</div>
-			<div class="padding-top-30">
+			<div class="padding-top-10">
 				<img src="/support/logo-r.svg" alt="" class="logo-r">
 			</div>
 			<div>
@@ -693,7 +740,7 @@
 				<p class="color-almendra uppercase smaller-text text-right">
 					VALLE DE GUADALUPE, BC, MX.
 				</p>
-				<p class="color-almendra padding-top-80">
+				<p class="color-almendra padding-top-50">
 					<a class="link-map" href="https://www.google.com/maps">Google Maps</a>
 					<span class="social-media">
 						<img src="/support/yelp.svg" alt="">
@@ -705,6 +752,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="padding-top-100"></div>
+	<div class="padding-top-50"></div>
 </div>
 

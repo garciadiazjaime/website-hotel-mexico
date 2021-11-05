@@ -114,7 +114,7 @@
 				<li><a aria-current="{segment === 'habitaciones' ? 'page' : undefined}" href="habitaciones">habitaciones</a></li>
 				<li><a aria-current="{segment === 'cava-cocina' ? 'page' : undefined}" href="cava-cocina">cava y cocina</a></li>
 				<li><a aria-current="{segment === 'amenidades' ? 'page' : undefined}" href="amenidades">amenidades</a></li>
-				<li><a aria-current="{segment === 'reserva' ? 'page' : undefined}" href="reserva">reserva</a></li>
+				<li><a aria-current="{segment === 'reserva' ? 'page' : undefined}" href="https://www.airbnb.com/users/200220394/listings" target="_blank">reserva</a></li>
 			</ul>
 		</nav>
 	</div>
