@@ -6,6 +6,9 @@
 
 	onMount(() => {
 		const element = document.querySelector('.banner');
+		if (!element) {
+			return
+		}
 		const handleIntersection = (entries) => {
 			for (let entry of entries) {
 				isFixed = !entry.isIntersecting
@@ -19,6 +22,14 @@
 </script>
 
 <style>
+	:root {
+		--color-verde: #132F19;
+		--color-almendra: #BAA57D;
+		--color-lino: #E8E1DC;
+		--color-hueso: #F7F7F5;
+		--color-background: #F1F1EF;
+	}
+
 	header {
 		background-color: var(--color-verde);
 		color: white;
@@ -114,7 +125,7 @@
 				<li><a aria-current="{segment === 'habitaciones' ? 'page' : undefined}" href="habitaciones">habitaciones</a></li>
 				<li><a aria-current="{segment === 'cava-cocina' ? 'page' : undefined}" href="cava-cocina">cava y cocina</a></li>
 				<li><a aria-current="{segment === 'amenidades' ? 'page' : undefined}" href="amenidades">amenidades</a></li>
-				<li><a aria-current="{segment === 'reserva' ? 'page' : undefined}" href="https://www.airbnb.com/users/200220394/listings" target="_blank">reserva</a></li>
+				<li><a href="https://www.airbnb.com/users/200220394/listings" target="_blank">reserva</a></li>
 			</ul>
 		</nav>
 	</div>
