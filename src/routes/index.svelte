@@ -641,6 +641,9 @@
 		.backgroun-light .green-background {
 			margin: 0 -12px;
 		}
+		.col-382 {
+			width: 100%;
+		}
 	}
 </style>
 
