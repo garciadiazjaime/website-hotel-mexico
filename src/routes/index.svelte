@@ -244,7 +244,7 @@
 		margin: 0;
 	}
 
-	h1, h2, h3, h4, ul {
+	h1, h2, h3, ul {
 		margin: 0;
 	}
 
@@ -585,11 +585,8 @@
 	}
 
 	@media (max-width: 480px) {
-		.content {
-			padding: 12px;
-		}
-		.padding-left-60 {
-			padding-left: 0;
+		ul {
+			margin-bottom: 200px;
 		}
 		h1 {
 			padding-left: 20px;
@@ -601,6 +598,13 @@
 		}
 		h3 span {
 			padding-left: initial;
+			text-align: initial;
+		}
+		.content {
+			padding: 12px;
+		}
+		.padding-left-60 {
+			padding-left: 0;
 		}
 		.title span {
 			margin-left: 20px;
@@ -623,12 +627,19 @@
 		}
 		.carousel {
 			padding-top: 100px;
+			max-width: 100%;
 		}
-		h3 span {
-			text-align: initial;
+		.arrows {
+			position: absolute;
+			top: 0px;
+			height: 100%;
+			width: 100%;
 		}
-		ul {
-			margin-bottom: 200px;
+		.content-menu {
+			padding: 0 12px;
+		}
+		.backgroun-light .green-background {
+			margin: 0 -12px;
 		}
 	}
 </style>
@@ -746,7 +757,7 @@
 					</div>
 				</div>
 
-				<div class="padding-left-60 inline-block pull-right">
+				<div class="padding-left-60 inline-block pull-right position-relative">
 					<h3 class="padding-top-50">Naturaleza</h3>
 
 					<img class="padding-top-50 icon-b" src="/support/icon-b.svg" alt="">

@@ -112,6 +112,12 @@
 		position: fixed;
 		top: 0px;
 	}
+
+	@media (max-width: 480px) {
+		.content {
+			padding: 0 12px;
+		}
+	}
 </style>
 
 <header class={isFixed ? 'fixed' : ''}>
