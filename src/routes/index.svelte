@@ -1,7 +1,94 @@
 <script>
+	import { onMount } from 'svelte';
+
 	import Nav from '../components/Nav.svelte';
 	import Button from '../components/Button.svelte'
-	import Arrow from '../components/Arrow.svelte'
+	import Carousel from '../components/Carousel-Simple.svelte';
+
+	let SvelteCarousel;
+  onMount(async () => {
+    const module = await import('svelte-carousel');
+    SvelteCarousel = module.default;
+  });
+
+	const cabins = [
+		{
+			path: '/homepage/habitaciones/BajaCaliforniaSur.jpg',
+			id: 'BajaCaliforniaSur',
+			name: 'Baja California Sur',
+		},
+		{
+			path: '/homepage/habitaciones/Chihuahua.jpeg',
+			id: 'Chihuahua',
+			name: 'Chihuahua',
+		},
+		{
+			path: '/homepage/habitaciones/Coahuila.jpg',
+			id: 'Coahuila',
+			name: 'Coahuila',
+		},
+		{
+			path: '/homepage/habitaciones/Durango.jpg',
+			id: 'Durango',
+			name: 'Durango',
+		},
+		{
+			path: '/homepage/habitaciones/Sinaloa.jpg',
+			id: 'Sinaloa',
+			name: 'Sinaloa',
+		},
+		{
+			path: '/homepage/habitaciones/Sonora.jpg',
+			id: 'Sonora',
+			name: 'Sonora',
+		},
+	];
+	
+	const slidesB = [
+		{
+			path: '/homepage/naturaleza/exterior_001.jpg',
+			id: 'exterior_001',
+		},
+		{
+			path: '/homepage/naturaleza/exterior_002.jpg',
+			id: 'exterior_002',
+		},
+		{
+			path: '/homepage/naturaleza/exterior_003.jpg',
+			id: 'exterior_003',
+		},
+		{
+			path: '/homepage/naturaleza/exterior_004.jpg',
+			id: 'exterior_004',
+		},
+		{
+			path: '/homepage/naturaleza/exterior_005.jpg',
+			id: 'exterior_005',
+		},
+		{
+			path: '/homepage/naturaleza/exterior_006.jpg',
+			id: 'exterior_006',
+		},
+		{
+			path: '/homepage/naturaleza/exterior_007.jpg',
+			id: 'exterior_007',
+		},
+		{
+			path: '/homepage/naturaleza/exterior_008.jpg',
+			id: 'exterior_008',
+		},
+	]
+
+	function arrowClickHandler(event, direction) {
+		event.preventDefault()
+
+		console.log(direction)
+		if (direction === 'left') {
+			document.querySelector('.green-background .arrow-control-prev').click()
+		} else {
+			document.querySelector('.green-background .arrow-control-next').click()
+		}
+	}
 </script>
 
 <style>
@@ -244,14 +331,6 @@
 		justify-content: space-between;
 	}
 
-	.flex {
-		display: flex;
-	}
-
-	.col-20 {
-		width: 20%;
-	}
-
 	.col-25 {
 		width: 25%;
 	}
@@ -286,6 +365,7 @@
 
 	.col-382 {
 		width: 382px;
+		vertical-align: top;
 	}
 
 	.padding-top-bottom-30 {
@@ -361,16 +441,6 @@
 	p.border-bottom {
 		border-bottom: 1px solid;
 	}
-
-	.image-mask {
-		background-color: black;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0.1;
-	}
 	
 	.uppercase {
 		text-transform: uppercase;
@@ -417,6 +487,18 @@
 		margin: 0 auto;
 	}
 
+	.inline-block {
+		display: inline-block;
+	}
+
+	.carousel {
+		max-width: 585px;
+	}
+
+	.clear {
+		clear: both;
+	}
+
 	.slide {
 		position: relative;
 	}
@@ -427,26 +509,6 @@
 		margin: 0 auto;
 		position: relative;
 		top: 7px;
-	}
-
-	.slide h4 {
-		position: absolute;
-		top: 38%;
-		color: white;
-		text-align: center;
-		width: 100%;
-		font-size: 15px;
-		font-family: gotham;
-	}
-	.slide strong {
-		position: absolute;
-		top: 48%;
-		text-align: center;
-		width: 100%;
-		display: block;
-		color: white;
-		font-family: trento;
-		font-size: 10px;
 	}
 
 	li {
@@ -505,6 +567,23 @@
 		overflow: hidden;
 	}
 
+	.pull-right {
+		float: right;
+	}
+
+	.pull-left {
+		float: left;
+	}
+
+	.arrow {
+		width: 83px;
+		height: 13px;
+	}
+
+	.arrow:hover {
+		cursor: pointer;
+	}
+
 	@media (max-width: 480px) {
 		.content {
 			padding: 12px;
@@ -528,9 +607,6 @@
 		}
 		.chevron-wrapper {
 			width: 100%;
-		}
-		.flex {
-			display: block;
 		}
 		.brand {
 			font-size: 10px;
@@ -583,8 +659,8 @@
 
 <div class="backgroun-light">
 	<div class="content">
-		<div class="row padding-top-150">
-			<div class="col-382">
+		<div class="padding-top-150">
+			<div class="col-382 inline-block">
 				<h3>Regresa <span>a casa</span></h3>
 				<p class="padding-top-30 col-70">
 					La calidez de nuestra tierra convertida en un espacio que te abraza, te da la bienvenida y parece que nunca se acaba.
@@ -593,23 +669,13 @@
 					<Button href="/habitaciones" className="small-arrow">ver habitaciones</Button>
 				</div>
 			</div>
-			<div class="carousel">
-				<div class="slide">
-					<img src="/homepage/carousel_a/image_a.jpg" alt="">
-					<div class="image-mask"></div>
-					<h4>CASA</h4>
-					<strong>CHIHUAHUA</strong>
-				</div>
 
-				<div class="arrows">
-					<div class="col-20">
-						<Arrow className="left-arrow" />
-					</div>
-					<div class="col-20">
-						<Arrow className="right-arrow" />
-					</div>
+			<div class="carousel inline-block pull-right">
+				<div class="slide">
+					<Carousel slides={cabins} Carousel={SvelteCarousel} />
 				</div>
 			</div>
+			<div class="clear"></div>
 		</div>
 	</div>
 </div>
@@ -673,9 +739,14 @@
 <div class="backgroun-light padding-top-150">
 	<div class="content">
 		<div class="green-background">
-			<div class="flex padding-top-bottom-30">
-				<img src="/homepage/carousel_b/image_a.jpg" alt="">
-				<div class="padding-left-60 col-100">
+			<div class="padding-top-bottom-30">
+				<div class="carousel inline-block pull-left">
+					<div class="slide">
+						<Carousel slides={slidesB} Carousel={SvelteCarousel} arrows={false} />
+					</div>
+				</div>
+
+				<div class="padding-left-60 inline-block pull-right">
 					<h3 class="padding-top-50">Naturaleza</h3>
 
 					<img class="padding-top-50 icon-b" src="/support/icon-b.svg" alt="">
@@ -683,14 +754,20 @@
 					<div class="padding-top-180">
 						<div class="arrows">
 							<div class="col-25">
-								<Arrow className="left-arrow white-arrow" />
+								<a class="arrow" href="/" on:click={(event) => arrowClickHandler(event, 'left')}>
+									<img src="/support/arrow-left-white.svg" alt="">
+								</a>
 							</div>
 							<div class="col-25">
-								<Arrow className="right-arrow white-arrow" />
+								<a class="arrow" href="/" on:click={event => arrowClickHandler(event, 'right')}>
+									<img src="/support/arrow-right-white.svg" alt="">
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
+
+				<div class="clear"></div>
 			</div>
 		</div>
 	</div>
