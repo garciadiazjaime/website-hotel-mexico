@@ -3,6 +3,7 @@
 
 	export let segment;
 	let isFixed = false;
+	let isOpen = false
 
 	onMount(() => {
 		const element = document.querySelector('.banner');
@@ -19,6 +20,9 @@
 		observer.observe(element);
 	})
 
+	function toggleMenu() {
+		isOpen = !isOpen
+	}
 </script>
 
 <style>
@@ -112,6 +116,56 @@
 		position: fixed;
 		top: 0px;
 	}
+
+	.mobile-menu {
+		display: none;
+	}
+
+	@media (max-width: 480px) {
+		nav {
+			position: absolute;
+			left: 0;
+			top: 74px;
+			z-index: 2;
+			width: 100%;
+			background-color: var(--color-verde);
+		}
+		li, li a {
+			width: 100%;
+		}
+		a {
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		.content {
+			padding: 0 12px;
+			position: relative;
+		}
+
+		.mobile-menu {
+			display: block;
+			position: relative;
+			text-align: right;
+		}
+
+		.mobile-menu:after {
+			content: '\2807';
+			font-size: 50px;
+			color: var(--color-lino);
+		}
+		[aria-current]::after {
+			left: 8px;
+		}
+		.visible {
+			height: auto;
+			opacity: 1;
+		}
+
+		.hide {
+			height: 0;
+			opacity: 0;
+		}
+	}
 </style>
 
 <header class={isFixed ? 'fixed' : ''}>
@@ -119,7 +173,8 @@
 		<div class="logo">
 			<img src="/support/logo-mini.svg" alt="">
 		</div>
-		<nav>
+		<div class="mobile-menu" on:click={toggleMenu}></div>
+		<nav class={isOpen ? 'visible' : 'hide'}>
 			<ul>
 				<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">inicio</a></li>
 				<li><a aria-current="{segment === 'habitaciones' ? 'page' : undefined}" href="habitaciones">habitaciones</a></li>
