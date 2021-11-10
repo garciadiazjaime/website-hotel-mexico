@@ -4,6 +4,7 @@
 	import Nav from '../components/Nav.svelte';
 	import Button from '../components/Button.svelte'
 	import Carousel from '../components/Carousel-Simple.svelte';
+	import Footer from '../components/Footer.svelte'
 
 	let SvelteCarousel;
   onMount(async () => {
@@ -92,129 +93,6 @@
 </script>
 
 <style>
-	@font-face {
-		font-family: "mirage";
-		src: url("/fonts/mirage/mirage-thin.otf");
-		font-weight: 100;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "mirage";
-		src: url("/fonts/mirage/mirage-regular.otf");
-		font-weight: 200;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "mirage";
-		src: url("/fonts/mirage/mirage-medium.otf");
-		font-weight: 400;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "mirage";
-		src: url("/fonts/mirage/mirage-bold.otf");
-		font-weight: 600;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "mirage";
-		src: url("/fonts/mirage/mirage-black.otf");
-		font-weight: 800;
-		font-style: normal;
-	}
-
-
-	@font-face {
-		font-family: "gotham";
-		src: url("/fonts/gotham/Gotham-XLight.ttf");
-		font-weight: 100;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "gotham";
-		src: url("/fonts/gotham/Gotham-XLightItalic.ttf");
-		font-weight: 100;
-		font-style: italic;
-	}
-	@font-face {
-		font-family: "gotham";
-		src: url("/fonts/gotham/Gotham-Medium.ttf");
-		font-weight: 200;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "gotham";
-		src: url("/fonts/gotham/Gotham-MediumItalic.ttf");
-		font-weight: 200;
-		font-style: italic;
-	}
-	@font-face {
-		font-family: "gotham";
-		src: url("/fonts/gotham/Gotham-Light.ttf");
-		font-weight: 400;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "gotham";
-		src: url("/fonts/gotham/Gotham-LightItalic.ttf");
-		font-weight: 400;
-		font-style: italic;
-	}
-	@font-face {
-		font-family: "gotham";
-		src: url("/fonts/gotham/Gotham-Book.ttf");
-		font-weight: 600;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "gotham";
-		src: url("/fonts/gotham/Gotham-Bold.ttf");
-		font-weight: 800;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "gotham";
-		src: url("/fonts/gotham/Gotham-BoldItalic.ttf");
-		font-weight: 800;
-		font-style: italic;
-	}
-	@font-face {
-		font-family: "gotham";
-		src: url("/fonts/gotham/Gotham-Black.ttf");
-		font-weight: 1000;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "gotham";
-		src: url("/fonts/gotham/Gotham-BlackItalic.ttf");
-		font-weight: 1000;
-		font-style: italic;
-	}
-
-
-	@font-face {
-		font-family: "trento";
-		src: url("/fonts/trento/trento.ttf");
-		font-weight: 600;
-		font-style: normal;
-	}
-
-
-	@font-face {
-		font-family: "august";
-		src: url("/fonts/august/august.ttf");
-		font-weight: 600;
-		font-style: normal;
-	}
-
-	:root {
-		--color-verde: #132F19;
-		--color-almendra: #BAA57D;
-		--color-lino: #E8E1DC;
-		--color-hueso: #F7F7F5;
-		--color-background: #F1F1EF;
-	}
-
 	.color-almendra {
 		color: var(--color-almendra);
 	}
@@ -812,37 +690,4 @@
 	<div class="padding-top-100"></div>
 </div>
 
-
-<div class="green-background">
-	<div class="content-menu">
-		<div class="row padding-top-50">
-			<div>
-				<p class="color-almendra">El hotel de</p>
-				<div class="signature color-blanco">México y el Vino</div>
-				<p class="uppercase color-almendra border-bottom padding-top-20">HOTEL MÉXICO EN LA PIEL &#169;2021</p>
-			</div>
-			<div class="padding-top-10">
-				<img src="/support/logo-r.svg" alt="" class="logo-r">
-			</div>
-			<div>
-				<p class="color-almendra text-right">
-					hola@hotelmexicoenlapiel.com
-				</p>
-				<p class="color-almendra uppercase smaller-text text-right">
-					VALLE DE GUADALUPE, BC, MX.
-				</p>
-				<p class="color-almendra padding-top-50">
-					<a class="link-map" href="https://www.google.com/maps">Google Maps</a>
-					<span class="social-media">
-						<img src="/support/yelp.svg" alt="">
-						<img src="/support/tripadvisor.svg" alt="">
-						<img src="/support/facebook.svg" alt="">
-						<img src="/support/instagram.svg" alt="">
-					</span>
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="padding-top-50"></div>
-</div>
-
+<Footer />
