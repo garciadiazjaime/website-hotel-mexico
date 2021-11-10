@@ -4,7 +4,6 @@
 	import Nav from '../components/Nav.svelte';
 	import Button from '../components/Button.svelte'
 	import Carousel from '../components/Carousel-Simple.svelte';
-	import Footer from '../components/Footer.svelte'
 
 	let SvelteCarousel;
   onMount(async () => {
@@ -93,14 +92,6 @@
 </script>
 
 <style>
-	.color-almendra {
-		color: var(--color-almendra);
-	}
-
-	.color-blanco {
-		color: white;
-	}
-
 	h1 {
 		padding-left: 75px;
 		font-family: mirage;
@@ -142,10 +133,6 @@
 		margin: 0 auto;
 		padding: 0 140px;
 		box-sizing: border-box;
-	}
-
-	.smaller-text {
-		font-size: 13px;
 	}
 	
 	.cover {
@@ -250,10 +237,6 @@
 		padding: 30px;
 	}
 
-	.padding-top-10 {
-		padding-top: 10px;
-	}
-
 	.padding-top-20 {
 		padding-top: 20px;
 	}
@@ -316,14 +299,6 @@
 		font-weight: 600;
 	}
 
-	p.border-bottom {
-		border-bottom: 1px solid;
-	}
-	
-	.uppercase {
-		text-transform: uppercase;
-	}
-
 	.text-align-right {
 		text-align: right;
 	}
@@ -355,10 +330,6 @@
 
 	.text-center {
 		text-align: center;
-	}
-
-	.text-right {
-		text-align: right;
 	}
 
 	.block-center {
@@ -412,33 +383,6 @@
 		top: -20px;
 	}
 
-	.signature.color-blanco {
-		color: white;
-		font-size: 36px;
-		position: relative;
-		top: -16px;
-	}
-
-	.logo-r {
-		width: 60px;
-	}
-
-	.link-map {
-		display: inline-block;
-		margin-right: 20px;
-		position: relative;
-		top: -7px;
-		border-bottom: 1px solid;
-	}
-
-	.social-media {
-		display: inline-flex;
-	}
-
-	.social-media img {
-		width: 25px;
-		margin-right: 6px;
-	}
 
 	.image-b-mask {
 		max-height: 510px;
@@ -492,10 +436,6 @@
 		}
 		.brand {
 			font-size: 10px;
-		}
-		.signature.color-blanco {
-			font-size: 50px;
-			top: -20px;
 		}
 		.row {
 			display: block;
@@ -689,5 +629,3 @@
 	</div>
 	<div class="padding-top-100"></div>
 </div>
-
-<Footer />

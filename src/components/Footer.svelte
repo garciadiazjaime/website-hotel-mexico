@@ -120,7 +120,7 @@
 	}
 </style>
 
-<div class="green-background">
+<footer class="green-background">
 	<div class="content-menu">
 		<div class="row padding-top-50">
 			<div>
@@ -151,4 +151,4 @@
 		</div>
 	</div>
 	<div class="padding-top-50"></div>
-</div>
+</footer>
