@@ -13,7 +13,7 @@
 	}
 </style>
 
-{#if segment !== undefined}
+{#if segment !== undefined && segment !== 'amenidades'}
 	<Nav {segment}/>
 {/if}
 <main>
