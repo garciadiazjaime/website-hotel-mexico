@@ -50,42 +50,65 @@
 </Header>
 <Nav />
 <div class="gray">
-  <div class="small">
-    <h3>Regresa<br>a casa</h3>
-    <p>La calidez de nuestra tierra convertida en un espacio que te abraza, te da la bienvenida y parece que nunca se acaba.</p>
-    <a href="/habitaciones">Ver habitaciones</a>
+  <div class="carousel-grid">
+    <div>
+      <h3>Regresa<br>a casa</h3>
+      <p>La calidez de nuestra tierra convertida en un espacio que te abraza, te da la bienvenida y parece que nunca se acaba.</p>
+      <a href="/habitaciones">Ver habitaciones</a>
+    </div>
+    <div>
+      <svelte:component
+        this={Carousel}
+        autoplay
+        autoplayDuration={5000}
+        let:showPrevPage
+        let:showNextPage
+      >
+        {#each cabins as cabin}
+          <div class="cabin">
+            <img src={cabin.image} alt="cabin.name" />
+            <h3>
+              Casa<br><span>{cabin.name}</span>
+            </h3>
+          </div>
+        {/each}
+        <div slot="dots" class="nav-dots"></div>
+        <div slot="prev" on:click={showPrevPage} class='arrow-control arrow-control-prev'></div>
+        <div slot="next" on:click={showNextPage} class='arrow-control arrow-control-next'></div>
+      </svelte:component>
+    </div>
   </div>
-  <div class="large">
-    <svelte:component
-    this={Carousel}
-    autoplay
-    autoplayDuration={5000}
-    let:showPrevPage
-    let:showNextPage
-  >
-    {#each cabins as cabin}
-      <div class="cabin">
-        <img src={cabin.image} alt="cabin.name" />
-        <h3>
-          Casa<br><span>{cabin.name}</span>
-        </h3>
-      </div>
-    {/each}
-    <div slot="dots" class="nav-dots"></div>
-    <div slot="prev" on:click={showPrevPage} class='arrow-control arrow-control-prev'></div>
-    <div slot="next" on:click={showNextPage} class='arrow-control arrow-control-next'></div>
-  </svelte:component>
-  </div>
-  <div>
-    <img src="https://picsum.photos/490/712?random=15" alt="icon" />
-  </div>
-  <div>
-    <h3>El Hotel de México,<br>y el vino</h3>
-    <p>Arquitectura que emerge de la tierra y se fusionan con su entorno, 13 “casas” que rinden homenaje a nuestro México, habitaciones con jacuzzi privado y una ubicación inigualable entre viñedos, áreas rocosas y un sorprendente bosque de encinos, distintas atmósferas dispuestas para emular de manera natural el territorio mexicano; una extensión de 15 hectáreas en donde espacios íntimos y de descanso convergen con espacios de celebración.</p>
-    <p>Te invitamos a celebrar nuestra cultura<br>y disfrutar de nuestra tierra.</p>
-    <a href="/reserva">Reserva ahora</a>
+  <div class="image-grid">
+    <div>
+      <img src="https://picsum.photos/490/712?random=15" alt="icon" />
+    </div>
+    <div>
+      <h3>El Hotel de México,<br>y el vino</h3>
+      <p>Arquitectura que emerge de la tierra y se fusionan con su entorno, 13 “casas” que rinden homenaje a nuestro México, habitaciones con jacuzzi privado y una ubicación inigualable entre viñedos, áreas rocosas y un sorprendente bosque de encinos, distintas atmósferas dispuestas para emular de manera natural el territorio mexicano; una extensión de 15 hectáreas en donde espacios íntimos y de descanso convergen con espacios de celebración.</p>
+      <p>Te invitamos a celebrar nuestra cultura<br>y disfrutar de nuestra tierra.</p>
+      <a href="/reserva">Reserva ahora</a>
+    </div>
   </div>
 </div>
+<h3>Despertar con todo<br>México ante tus ojos</h3>
+<div class="image-grid">
+  <div>
+    <p>
+      Una experiencia exclusiva que le permitirá a cada uno de nuestros huéspedes explorar con todos sus sentidos los sabores de México, la riqueza de su tierra y sentir a flor de piel nuestra pasión por la cultura mexicana.
+    </p>
+    <ul>
+      <li>Espacios privados</li>
+      <li>Casas con jacuzzi</li>
+      <li>Servicio a cuarto</li>
+      <li>Seguridad 24 hr</li>
+      <li>Estacionamiento</li>
+      <li>Transporte interno</li>
+    </ul>
+  </div>
+  <img src="https://picsum.photos/600/400?random=15" />
+</div>
+<hr>
+
 <style>
   h3 {
     color: white;
@@ -105,15 +128,21 @@
 
   .gray {
     background: lightgray;
+    padding: 130px 50px 0;
   }
-  .gray .small {
-    flex-grow: 1;
+  .carousel-grid {
+    display: grid;
+    grid-template-columns: 1fr 700px;
+    column-gap: 40px;
+    margin-bottom: 180px;
   }
-  .gray .large {
-    position: relative;
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    margin-bottom: -180px;
   }
   .cabin {
-    background: darkgreen;
     position: relative;
     padding-bottom: 28px;
     text-align: center;
@@ -155,7 +184,7 @@
     display: block;
     position: absolute;
     top: 55%;
-    background-color: white;
+    background-color: darkgreen;
 
   }
 
@@ -163,16 +192,16 @@
     left: 15px;
   }
   .arrow-control-prev:before {
-    border-bottom: 1px solid white;
-    border-left: 1px solid white;
+    border-bottom: 1px solid darkgreen;
+    border-left: 1px solid darkgreen;
     left: -2px;
   }
   .arrow-control-next {
     right: 15px;
   }
   .arrow-control-next:before {
-    border-top: 2px solid white;
-    border-right: 2px solid white;
+    border-top: 1px solid darkgreen;
+    border-right: 1px solid darkgreen;
     right: 2px;
   }
 </style>
