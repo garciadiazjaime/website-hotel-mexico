@@ -139,6 +139,7 @@
     border: 2px solid var(--color-almendra);
     width: 100%;
     font-size: 20px;
+    box-sizing: border-box;
   }
   textarea {
     height: 180px;
@@ -203,6 +204,37 @@
     color: var(--color-almendra);
     font-size: 14px;
   }
+
+  @media (max-width: 480px) {
+    .map {
+      width: 100%;
+      height: auto;
+    }
+    .block-1 {
+      display: block;
+    }
+    .location {
+      width: auto;
+    }
+    form {
+      width: auto;
+    }
+    .gmaps-link {
+      position: absolute;
+      left: auto;
+      right: 12px;
+    }
+    .reserva {
+      padding: 8px 0;
+      width: 100%;
+      text-align: center;
+      display: inline-block;
+      line-height: 57px;
+    }
+    .content {
+      padding: 0 12px;
+    }
+  }
 </style>
 
 <Header
@@ -210,79 +242,83 @@
   bannerHeight="500"
 />
 
-<section class="block-1">
-  <div class="location">
-    <strong>ubicación</strong>
-    <img class="map" src="/contacto/map.jpg" alt="">
-    <p>
-      <img class="location-icon" src="/support/pin-location.svg" alt="">
-      <span>Vallle de Guadalupe, <br />
-        22766 Ensenada, BC, México</span>
-      <a class="gmaps-link" href="https://goo.gl/maps/RTzByVDUc2jHMF178" target="_blank">Google Maps</a>
-    </p>
-    <p>
-      <a href="https://www.facebook.com/hotelmexicoenlapiel" target="_blank">
-        <img class="facebook-icon" src="/support/facebook-small.svg" alt="">
-      </a>
-      <a href="https://www.instagram.com/hotelmexicoenlapiel/?hl=en" target="_blank">
-        <img class="instagram-icon" src="/support/instagram-small.svg" alt="">
-      </a>
-      <span>/ hotelmexicoenlapiel</span>
-    </p>
-    <p>
-      <img class="email-icon" src="/support/email.svg" alt="">
-      <span>hola@hotelmexicoenlapiel.com</span>
-    </p>
-  </div>
+<div class="content">
+  <section class="block-1">
+    <div class="location">
+      <strong>ubicación</strong>
+      <img class="map" src="/contacto/map.jpg" alt="">
+      <p>
+        <img class="location-icon" src="/support/pin-location.svg" alt="">
+        <span>Vallle de Guadalupe, <br />
+          22766 Ensenada, BC, México</span>
+        <a class="gmaps-link" href="https://goo.gl/maps/RTzByVDUc2jHMF178" target="_blank">Google Maps</a>
+      </p>
+      <p>
+        <a href="https://www.facebook.com/hotelmexicoenlapiel" target="_blank">
+          <img class="facebook-icon" src="/support/facebook-small.svg" alt="">
+        </a>
+        <a href="https://www.instagram.com/hotelmexicoenlapiel/?hl=en" target="_blank">
+          <img class="instagram-icon" src="/support/instagram-small.svg" alt="">
+        </a>
+        <span>/ hotelmexicoenlapiel</span>
+      </p>
+      <p>
+        <img class="email-icon" src="/support/email.svg" alt="">
+        <span>hola@hotelmexicoenlapiel.com</span>
+      </p>
+    </div>
 
-  <form action="">
-    <p>
-      <strong>nombre y apellido</strong>
-      <input type="text" bind:value={name}>
-    </p>
-    <p>
-      <strong>correo electrónico</strong>
-      <input type="text" bind:value={email}>
-    </p>
-    <p>
-      <strong>teléfono</strong>
-      <input type="text" bind:value={tel}>
-    </p>
-    <p>
-      <strong>interés/comentario</strong>
-      <textarea name="" id="" cols="30" rows="10" bind:value={comment}></textarea>
-    </p>
-    <p>
-      <Button onclick={formHandler} href="/" className="small-arrow-almendra color-almendra">enviar</Button>
-    </p>
-    <p class="error">
-      {msg}
-    </p>
-    {#if showLoading}
-      <div class="loader"></div>
-    {/if}
-  </form>
-</section>
+    <form action="">
+      <p>
+        <strong>nombre y apellido</strong>
+        <input type="text" bind:value={name}>
+      </p>
+      <p>
+        <strong>correo electrónico</strong>
+        <input type="text" bind:value={email}>
+      </p>
+      <p>
+        <strong>teléfono</strong>
+        <input type="text" bind:value={tel}>
+      </p>
+      <p>
+        <strong>interés/comentario</strong>
+        <textarea name="" id="" cols="30" rows="10" bind:value={comment}></textarea>
+      </p>
+      <p>
+        <Button onclick={formHandler} href="/" className="small-arrow-almendra color-almendra">enviar</Button>
+      </p>
+      <p class="error">
+        {msg}
+      </p>
+      {#if showLoading}
+        <div class="loader"></div>
+      {/if}
+    </form>
+  </section>
+</div>
 
 <div class="separator"></div>
 
 <section class="block-2">
-  <a class="reserva" href="http://www.airbnb.com/p/hotelmexicoenlapiel" target="_blank">reserva ahora</a>
+  <div class="content">
+    <a class="reserva" href="http://www.airbnb.com/p/hotelmexicoenlapiel" target="_blank">reserva ahora</a>
 
-  <p class="note">
-    *Reservaciones deben de hacerse con 15 días <br /> de anticipación para confirmar y procesar.
-  </p>
+    <p class="note">
+      *Reservaciones deben de hacerse con 15 días <br /> de anticipación para confirmar y procesar.
+    </p>
 
-  <p>
-    <img class="xx" src="/support/xx.svg" alt="">
-  </p>
+    <p>
+      <img class="xx" src="/support/xx.svg" alt="">
+    </p>
 
-  <p>
-    <a href="https://www.yelp.com/" target="_blank">
-      <img class="yelp-icon" src="/support/yelp-large.svg" alt="">
-    </a>
-    <a href="https://www.tripadvisor.com/Hotel_Review-g150770-d23673959-Reviews-Mexico_en_la_Piel-Ensenada_Ensenada_Municipality_Baja_California.html" target="_blank">
-      <img class="tripadvisor-icon" src="/support/tripadvisor-large.svg" alt="">
-    </a>
-  </p>
+    <p>
+      <a href="https://www.yelp.com/" target="_blank">
+        <img class="yelp-icon" src="/support/yelp-large.svg" alt="">
+      </a>
+      <a href="https://www.tripadvisor.com/Hotel_Review-g150770-d23673959-Reviews-Mexico_en_la_Piel-Ensenada_Ensenada_Municipality_Baja_California.html" target="_blank">
+        <img class="tripadvisor-icon" src="/support/tripadvisor-large.svg" alt="">
+      </a>
+    </p>
+  </div>
 </section>
