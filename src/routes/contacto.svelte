@@ -207,7 +207,20 @@
     height: 300px;
   }
 
-  @media (max-width: 480px) {
+  @media (min-width: 541px) and (max-width: 920px) {
+    .content {
+      padding: 0 12px;
+    }
+    iframe {
+      width: 420px;
+    }
+
+    .gmaps-link {
+      left: 90px;
+    }
+  }
+
+  @media (max-width: 540px) {
     .block-1 {
       padding-top: 40px;
     }

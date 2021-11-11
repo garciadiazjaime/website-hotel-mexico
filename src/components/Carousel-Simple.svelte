@@ -67,7 +67,7 @@
     display: none;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 540px) {
     .slide span {
       font-size: 6px;
     }

@@ -264,10 +264,6 @@
 		padding-top: 150px;
 	}
 
-	.padding-top-200 {
-		padding-top: 200px;
-	}
-
 	.padding-left-60 {
 		padding-left: 60px;
 	}
@@ -409,12 +405,61 @@
 		padding-top: 150px;
 	}
 
+	.block-b {
+		background-color: var(--color-hueso);
+		padding-top: 200px;
+	}
+
 	.block-d {
 		background-color: var(--color-verde);
 		padding: 30px;
 	}
 
-	@media (max-width: 480px) {
+	@media (min-width: 541px) and (max-width: 920px) {
+		.content {
+			padding: 0 12px;
+		}
+		.block-a {
+			padding-top: 90px;
+		}
+		.block-a h3 span {
+			padding-left: 20px;
+		}
+		.block-a .padding-top-80 {
+			padding-top: 50px;
+		}
+		.col-382 {
+			width: 200px;
+		}
+		.carousel {
+			max-width: 520px;
+		}
+
+		.block-b {
+			padding-top: 80px;
+		}
+		.image-b-mask {
+			max-width: 45%;
+			margin-right: 5%;
+		}
+
+		.block-d {
+			padding: 12px;
+			margin: 0 -12px;
+		}
+		.block-d .carousel {
+			max-width: 450px;
+		}
+		.block-d .padding-left-60 {
+			padding-left: 12px;
+		}
+
+		.block-e {
+			padding-top: 100px;
+		}
+	}
+
+	@media (max-width: 540px) {
 		ul {
 			margin-bottom: 200px;
 		}
@@ -536,9 +581,9 @@
 </div>
 
 
-<div class="backgroun-light">
+<div class="block-b">
 	<div class="content">
-		<div class="row padding-top-200">
+		<div class="row">
 			<div class="image-b-mask">
 				<img src="/homepage/copas_y_vino.jpg" alt="">
 			</div>
@@ -631,7 +676,7 @@
 </div>
 
 
-<div class="backgroun-light">
+<div class="block-e backgroun-light">
 	<div class="content padding-top-100 text-center">
 		<p class="text-center strong">HOTEL</p>
 

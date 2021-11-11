@@ -106,7 +106,7 @@
 		margin-right: 6px;
 	}
 
-	@media (max-width: 480px) {
+	@media (max-width: 540px) {
 		.signature.color-blanco {
 			font-size: 50px;
 			top: -20px;
