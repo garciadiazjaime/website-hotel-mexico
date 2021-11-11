@@ -249,6 +249,10 @@
 		padding-top: 50px;
 	}
 
+	.padding-top-60 {
+		padding-top: 60px;
+	}
+
 	.padding-top-70 {
 		padding-top: 70px;
 	}
@@ -406,6 +410,13 @@
 		cursor: pointer;
 	}
 
+	.block-4-description {
+		color: var(--color-almendra);
+    display: block;
+    width: 280px;
+    padding-top: 50px;
+	}
+
 	@media (max-width: 480px) {
 		ul {
 			margin-bottom: 200px;
@@ -461,6 +472,9 @@
 		}
 		.col-382 {
 			width: 100%;
+		}
+		.pull-right {
+			float: left;
 		}
 	}
 </style>
@@ -581,9 +595,13 @@
 				<div class="padding-left-60 inline-block pull-right position-relative">
 					<h3 class="padding-top-50">Naturaleza</h3>
 
+					<p class="block-4-description">
+						Paisajes que inspiran y nos llenan de orgullo; espacios naturales entre viñedos, vegetación endémica y encinares.
+					</p>
+
 					<img class="padding-top-50 icon-b" src="/support/icon-b.svg" alt="">
 
-					<div class="padding-top-180">
+					<div class="padding-top-60">
 						<div class="arrows">
 							<div class="col-25">
 								<a class="arrow" href="/" on:click={(event) => arrowClickHandler(event, 'left')}>
