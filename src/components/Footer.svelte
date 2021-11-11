@@ -117,6 +117,12 @@
 		.content-menu {
 			padding: 0 12px;
 		}
+		.contact {
+			padding-top: 40px;
+		}
+		.contact p {
+			text-align: left;
+		}
 	}
 </style>
 
@@ -131,7 +137,7 @@
 			<div class="padding-top-10">
 				<img src="/support/logo-r.svg" alt="" class="logo-r">
 			</div>
-			<div>
+			<div class="contact">
 				<p class="color-almendra text-right">
 					hola@hotelmexicoenlapiel.com
 				</p>

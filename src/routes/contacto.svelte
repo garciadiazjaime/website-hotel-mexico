@@ -96,9 +96,6 @@
     font-size: 18px;
     padding-bottom: 10px;
   }
-  .map {
-    margin-bottom: 20px;
-  }
   .location {
     width: 589px;
   }
@@ -205,10 +202,17 @@
     font-size: 14px;
   }
 
+  iframe {
+    width: 500px;
+    height: 300px;
+  }
+
   @media (max-width: 480px) {
-    .map {
+    .block-1 {
+      padding-top: 40px;
+    }
+    iframe {
       width: 100%;
-      height: auto;
     }
     .block-1 {
       display: block;
@@ -246,7 +250,7 @@
   <section class="block-1">
     <div class="location">
       <strong>ubicación</strong>
-      <img class="map" src="/contacto/map.jpg" alt="">
+      <iframe title="ubicación" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3383.031220398899!2d-116.6290347843266!3d32.01426798120903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d8efce960d5019%3A0x7366b9aeb37f8db7!2sM%C3%A9xico%20en%20la%20piel!5e0!3m2!1sen!2smx!4v1636645438067!5m2!1sen!2smx" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       <p>
         <img class="location-icon" src="/support/pin-location.svg" alt="">
         <span>Vallle de Guadalupe, <br />

@@ -82,11 +82,10 @@
 	function arrowClickHandler(event, direction) {
 		event.preventDefault()
 
-		console.log(direction)
 		if (direction === 'left') {
-			document.querySelector('.green-background .arrow-control-prev').click()
+			document.querySelector('.block-d .arrow-control-prev').click()
 		} else {
-			document.querySelector('.green-background .arrow-control-next').click()
+			document.querySelector('.block-d .arrow-control-next').click()
 		}
 	}
 </script>
@@ -233,10 +232,6 @@
 		vertical-align: top;
 	}
 
-	.padding-top-bottom-30 {
-		padding: 30px;
-	}
-
 	.padding-top-20 {
 		padding-top: 20px;
 	}
@@ -277,10 +272,6 @@
 		padding-left: 60px;
 	}
 
-	.padding-top-180 {
-		padding-top: 180px;
-	}
-
 	h3 {
 		font-size: 50px;
 		color: var(--color-almendra);
@@ -305,10 +296,6 @@
 
 	.text-align-right {
 		text-align: right;
-	}
-
-	.green-background {
-		background-color: var(--color-verde);
 	}
 
 	.backgroun-light {
@@ -417,6 +404,16 @@
     padding-top: 50px;
 	}
 
+	.block-a {
+		background-color: var(--color-hueso);
+		padding-top: 150px;
+	}
+
+	.block-d {
+		background-color: var(--color-verde);
+		padding: 30px;
+	}
+
 	@media (max-width: 480px) {
 		ul {
 			margin-bottom: 200px;
@@ -444,6 +441,7 @@
 		}
 		.chevron-wrapper {
 			width: 100%;
+			top: 20px;
 		}
 		.brand {
 			font-size: 10px;
@@ -455,7 +453,6 @@
 			width: auto;
 		}
 		.carousel {
-			padding-top: 100px;
 			max-width: 100%;
 		}
 		.arrows {
@@ -467,14 +464,27 @@
 		.content-menu {
 			padding: 0 12px;
 		}
-		.backgroun-light .green-background {
-			margin: 0 -12px;
-		}
 		.col-382 {
 			width: 100%;
 		}
 		.pull-right {
 			float: left;
+		}
+		.block-a { 
+			padding-top: 40px;
+		}
+		.block-d {
+			margin: 0 -12px;
+			padding: 60px 12px 0;
+		}
+		.block-4-description {
+			width: 100%;
+		}
+		.block-d .pull-right {
+			width: 100%;
+		}
+		.block-e-description {
+			width: 90%;
 		}
 	}
 </style>
@@ -503,26 +513,25 @@
 
 <Nav />
 
-<div class="backgroun-light">
+<div class="block-a">
 	<div class="content">
-		<div class="padding-top-150">
-			<div class="col-382 inline-block">
-				<h3>Regresa <span>a casa</span></h3>
-				<p class="padding-top-30 col-70">
-					La calidez de nuestra tierra convertida en un espacio que te abraza, te da la bienvenida y parece que nunca se acaba.
-				</p>
-				<div class="padding-top-80">
-					<Button href="/habitaciones" className="small-arrow">ver habitaciones</Button>
-				</div>
+		<div class="col-382 inline-block">
+			<h3>Regresa <span>a casa</span></h3>
+			<p class="padding-top-30 col-70">
+				La calidez de nuestra tierra convertida en un espacio que te abraza, te da la bienvenida y parece que nunca se acaba.
+			</p>
+			<div class="padding-top-80">
+				<Button href="/habitaciones" className="small-arrow">ver habitaciones</Button>
 			</div>
-
-			<div class="carousel inline-block pull-right">
-				<div class="slide">
-					<Carousel slides={cabins} Carousel={SvelteCarousel} />
-				</div>
-			</div>
-			<div class="clear"></div>
+			<div class="padding-top-50"></div>
 		</div>
+
+		<div class="carousel inline-block pull-right">
+			<div class="slide">
+				<Carousel slides={cabins} Carousel={SvelteCarousel} />
+			</div>
+		</div>
+		<div class="clear"></div>
 	</div>
 </div>
 
@@ -584,41 +593,39 @@
 
 <div class="backgroun-light padding-top-150">
 	<div class="content">
-		<div class="green-background">
-			<div class="padding-top-bottom-30">
-				<div class="carousel inline-block pull-left">
-					<div class="slide">
-						<Carousel slides={slidesB} Carousel={SvelteCarousel} arrows={false} />
-					</div>
+		<div class="block-d">
+			<div class="carousel inline-block pull-left">
+				<div class="slide">
+					<Carousel slides={slidesB} Carousel={SvelteCarousel} arrows={false} />
 				</div>
+			</div>
 
-				<div class="padding-left-60 inline-block pull-right position-relative">
-					<h3 class="padding-top-50">Naturaleza</h3>
+			<div class="padding-left-60 inline-block pull-right position-relative">
+				<h3 class="padding-top-50">Naturaleza</h3>
 
-					<p class="block-4-description">
-						Paisajes que inspiran y nos llenan de orgullo; espacios naturales entre viñedos, vegetación endémica y encinares.
-					</p>
+				<p class="block-4-description">
+					Paisajes que inspiran y nos llenan de orgullo; espacios naturales entre viñedos, vegetación endémica y encinares.
+				</p>
 
-					<img class="padding-top-50 icon-b" src="/support/icon-b.svg" alt="">
+				<img class="padding-top-50 icon-b" src="/support/icon-b.svg" alt="">
 
-					<div class="padding-top-60">
-						<div class="arrows">
-							<div class="col-25">
-								<a class="arrow" href="/" on:click={(event) => arrowClickHandler(event, 'left')}>
-									<img src="/support/arrow-left-white.svg" alt="">
-								</a>
-							</div>
-							<div class="col-25">
-								<a class="arrow" href="/" on:click={event => arrowClickHandler(event, 'right')}>
-									<img src="/support/arrow-right-white.svg" alt="">
-								</a>
-							</div>
+				<div class="padding-top-60">
+					<div class="arrows">
+						<div class="col-25">
+							<a class="arrow" href="/" on:click={(event) => arrowClickHandler(event, 'left')}>
+								<img src="/support/arrow-left-white.svg" alt="">
+							</a>
+						</div>
+						<div class="col-25">
+							<a class="arrow" href="/" on:click={event => arrowClickHandler(event, 'right')}>
+								<img src="/support/arrow-right-white.svg" alt="">
+							</a>
 						</div>
 					</div>
 				</div>
-
-				<div class="clear"></div>
 			</div>
+
+			<div class="clear"></div>
 		</div>
 	</div>
 </div>
@@ -637,11 +644,11 @@
 
 		<img class="block-center padding-top-20" src="/support/icon-c.png" alt="">
 
-		<p class="padding-top-50 col-58 block-center">
+		<p class="block-e-description padding-top-50 col-58 block-center">
 			Excelencia en cada detalle para que puedas disfrutar del Valle de Guadalupe en todas sus expresiones, desde su clima mediterráneo y sus paisajes espectaculares hasta el sabor de su comida y sus vinos más selectos.
 		</p>
 		<br />
-		<p class="text-center col-40 block-center">
+		<p class="block-e-description text-center col-40 block-center">
 			Una experiencia exclusiva y reconfortante, para celebrar el amor por México y el Valle de Guadalupe.
 		</p>
 	</div>

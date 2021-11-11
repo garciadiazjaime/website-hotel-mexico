@@ -66,6 +66,12 @@
   .hide {
     display: none;
   }
+
+  @media (max-width: 480px) {
+    .slide span {
+      font-size: 6px;
+    }
+  }
 </style>
 
 <div class="carousel-container">
