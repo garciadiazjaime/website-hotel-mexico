@@ -154,14 +154,14 @@
     {#each cabinData.images as img}
       <img src={img.path} alt={img.id} id={img.id} />
     {/each}
-     <div slot="next" on:click={showNextPage} class='arrow-control arrow-control-next'></div>
-     <div slot="dots" class="nav-dots">
-     {#each Array(pagesCount) as _, pageIndex (pageIndex)}
-      <div class="nav-dot {currentPageIndex === pageIndex ? 'active' : ''}"
-        on:click={() => showPage(pageIndex)}
-      ></div>
-     {/each}
-     </div>
+      <div slot="next" on:click={showNextPage} class='arrow-control arrow-control-next'></div>
+      <div slot="dots" class="nav-dots">
+      {#each Array(pagesCount) as _, pageIndex (pageIndex)}
+        <div class="nav-dot {currentPageIndex === pageIndex ? 'active' : ''}"
+          on:click={() => showPage(pageIndex)}
+        ></div>
+      {/each}
+    </div>
   </svelte:component>
   <h3><span>Casa</span>{cabinData.name}</h3>
   </div>
