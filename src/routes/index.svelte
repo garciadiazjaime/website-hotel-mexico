@@ -535,7 +535,7 @@
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>HOTEL MÉXICO EN LA PIEL ® | Un homenaje a nuestro México</title>
 </svelte:head>
 
 

@@ -254,6 +254,10 @@
   }
 </style>
 
+<svelte:head>
+	<title>HOTEL MÉXICO EN LA PIEL ® | Contacto</title>
+</svelte:head>
+
 <Header
   backgroundImage="/contacto/header.jpg"
   bannerHeight="500"

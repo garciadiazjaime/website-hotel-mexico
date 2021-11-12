@@ -136,6 +136,8 @@
 	}
 </style>
 
+<link rel="icon" type="image/svg+xml" href="/support/logo-mini.svg">
+
 {#if segment !== undefined && segment !== 'amenidades'}
 	<Nav {segment}/>
 {/if}
