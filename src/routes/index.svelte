@@ -43,7 +43,7 @@
 			name: 'Sonora',
 		},
 	];
-	
+
 	const slidesB = [
 		{
 			path: '/homepage/naturaleza/exterior_001.jpg',
@@ -82,15 +82,147 @@
 	function arrowClickHandler(event, direction) {
 		event.preventDefault()
 
+		console.log(direction)
 		if (direction === 'left') {
-			document.querySelector('.block-d .arrow-control-prev').click()
+			document.querySelector('.green-background .arrow-control-prev').click()
 		} else {
-			document.querySelector('.block-d .arrow-control-next').click()
+			document.querySelector('.green-background .arrow-control-next').click()
 		}
 	}
 </script>
 
 <style>
+	@font-face {
+		font-family: "mirage";
+		src: url("/fonts/mirage/mirage-thin.otf");
+		font-weight: 100;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "mirage";
+		src: url("/fonts/mirage/mirage-regular.otf");
+		font-weight: 200;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "mirage";
+		src: url("/fonts/mirage/mirage-medium.otf");
+		font-weight: 400;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "mirage";
+		src: url("/fonts/mirage/mirage-bold.otf");
+		font-weight: 600;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "mirage";
+		src: url("/fonts/mirage/mirage-black.otf");
+		font-weight: 800;
+		font-style: normal;
+	}
+
+
+	@font-face {
+		font-family: "gotham";
+		src: url("/fonts/gotham/Gotham-XLight.ttf");
+		font-weight: 100;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "gotham";
+		src: url("/fonts/gotham/Gotham-XLightItalic.ttf");
+		font-weight: 100;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: "gotham";
+		src: url("/fonts/gotham/Gotham-Medium.ttf");
+		font-weight: 200;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "gotham";
+		src: url("/fonts/gotham/Gotham-MediumItalic.ttf");
+		font-weight: 200;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: "gotham";
+		src: url("/fonts/gotham/Gotham-Light.ttf");
+		font-weight: 400;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "gotham";
+		src: url("/fonts/gotham/Gotham-LightItalic.ttf");
+		font-weight: 400;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: "gotham";
+		src: url("/fonts/gotham/Gotham-Book.ttf");
+		font-weight: 600;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "gotham";
+		src: url("/fonts/gotham/Gotham-Bold.ttf");
+		font-weight: 800;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "gotham";
+		src: url("/fonts/gotham/Gotham-BoldItalic.ttf");
+		font-weight: 800;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: "gotham";
+		src: url("/fonts/gotham/Gotham-Black.ttf");
+		font-weight: 1000;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "gotham";
+		src: url("/fonts/gotham/Gotham-BlackItalic.ttf");
+		font-weight: 1000;
+		font-style: italic;
+	}
+
+
+	@font-face {
+		font-family: "trento";
+		src: url("/fonts/trento/trento.ttf");
+		font-weight: 600;
+		font-style: normal;
+	}
+
+
+	@font-face {
+		font-family: "august";
+		src: url("/fonts/august/august.ttf");
+		font-weight: 600;
+		font-style: normal;
+	}
+
+	:root {
+		--color-verde: #132F19;
+		--color-almendra: #BAA57D;
+		--color-lino: #E8E1DC;
+		--color-hueso: #F7F7F5;
+		--color-background: #F1F1EF;
+	}
+
+	.color-almendra {
+		color: var(--color-almendra);
+	}
+
+	.color-blanco {
+		color: white;
+	}
+
 	h1 {
 		padding-left: 75px;
 		font-family: mirage;
@@ -133,7 +265,11 @@
 		padding: 0 140px;
 		box-sizing: border-box;
 	}
-	
+
+	.smaller-text {
+		font-size: 13px;
+	}
+
 	.cover {
 		position: relative;
 		height: 100%;
@@ -232,6 +368,14 @@
 		vertical-align: top;
 	}
 
+	.padding-top-bottom-30 {
+		padding: 30px;
+	}
+
+	.padding-top-10 {
+		padding-top: 10px;
+	}
+
 	.padding-top-20 {
 		padding-top: 20px;
 	}
@@ -242,10 +386,6 @@
 
 	.padding-top-50 {
 		padding-top: 50px;
-	}
-
-	.padding-top-60 {
-		padding-top: 60px;
 	}
 
 	.padding-top-70 {
@@ -264,8 +404,16 @@
 		padding-top: 150px;
 	}
 
+	.padding-top-200 {
+		padding-top: 200px;
+	}
+
 	.padding-left-60 {
 		padding-left: 60px;
+	}
+
+	.padding-top-180 {
+		padding-top: 180px;
 	}
 
 	h3 {
@@ -290,8 +438,20 @@
 		font-weight: 600;
 	}
 
+	p.border-bottom {
+		border-bottom: 1px solid;
+	}
+
+	.uppercase {
+		text-transform: uppercase;
+	}
+
 	.text-align-right {
 		text-align: right;
+	}
+
+	.green-background {
+		background-color: var(--color-verde);
 	}
 
 	.backgroun-light {
@@ -307,7 +467,7 @@
 	.position-relative {
 		position: relative;
 	}
-	
+
 	.over-image {
 		width: 200px;
 		position: absolute;
@@ -317,6 +477,10 @@
 
 	.text-center {
 		text-align: center;
+	}
+
+	.text-right {
+		text-align: right;
 	}
 
 	.block-center {
@@ -370,6 +534,33 @@
 		top: -20px;
 	}
 
+	.signature.color-blanco {
+		color: white;
+		font-size: 36px;
+		position: relative;
+		top: -16px;
+	}
+
+	.logo-r {
+		width: 60px;
+	}
+
+	.link-map {
+		display: inline-block;
+		margin-right: 20px;
+		position: relative;
+		top: -7px;
+		border-bottom: 1px solid;
+	}
+
+	.social-media {
+		display: inline-flex;
+	}
+
+	.social-media img {
+		width: 25px;
+		margin-right: 6px;
+	}
 
 	.image-b-mask {
 		max-height: 510px;
@@ -393,73 +584,7 @@
 		cursor: pointer;
 	}
 
-	.block-4-description {
-		color: var(--color-almendra);
-    display: block;
-    width: 280px;
-    padding-top: 50px;
-	}
-
-	.block-a {
-		background-color: var(--color-hueso);
-		padding-top: 150px;
-	}
-
-	.block-b {
-		background-color: var(--color-hueso);
-		padding-top: 200px;
-	}
-
-	.block-d {
-		background-color: var(--color-verde);
-		padding: 30px;
-	}
-
-	@media (min-width: 541px) and (max-width: 920px) {
-		.content {
-			padding: 0 12px;
-		}
-		.block-a {
-			padding-top: 90px;
-		}
-		.block-a h3 span {
-			padding-left: 20px;
-		}
-		.block-a .padding-top-80 {
-			padding-top: 50px;
-		}
-		.col-382 {
-			width: 200px;
-		}
-		.carousel {
-			max-width: 520px;
-		}
-
-		.block-b {
-			padding-top: 80px;
-		}
-		.image-b-mask {
-			max-width: 45%;
-			margin-right: 5%;
-		}
-
-		.block-d {
-			padding: 12px;
-			margin: 0 -12px;
-		}
-		.block-d .carousel {
-			max-width: 450px;
-		}
-		.block-d .padding-left-60 {
-			padding-left: 12px;
-		}
-
-		.block-e {
-			padding-top: 100px;
-		}
-	}
-
-	@media (max-width: 540px) {
+	@media (max-width: 480px) {
 		ul {
 			margin-bottom: 200px;
 		}
@@ -486,10 +611,13 @@
 		}
 		.chevron-wrapper {
 			width: 100%;
-			top: 20px;
 		}
 		.brand {
 			font-size: 10px;
+		}
+		.signature.color-blanco {
+			font-size: 50px;
+			top: -20px;
 		}
 		.row {
 			display: block;
@@ -498,6 +626,7 @@
 			width: auto;
 		}
 		.carousel {
+			padding-top: 100px;
 			max-width: 100%;
 		}
 		.arrows {
@@ -509,27 +638,11 @@
 		.content-menu {
 			padding: 0 12px;
 		}
+		.backgroun-light .green-background {
+			margin: 0 -12px;
+		}
 		.col-382 {
 			width: 100%;
-		}
-		.pull-right {
-			float: left;
-		}
-		.block-a { 
-			padding-top: 40px;
-		}
-		.block-d {
-			margin: 0 -12px;
-			padding: 60px 12px 0;
-		}
-		.block-4-description {
-			width: 100%;
-		}
-		.block-d .pull-right {
-			width: 100%;
-		}
-		.block-e-description {
-			width: 90%;
 		}
 	}
 </style>
@@ -558,32 +671,33 @@
 
 <Nav />
 
-<div class="block-a">
+<div class="backgroun-light">
 	<div class="content">
-		<div class="col-382 inline-block">
-			<h3>Regresa <span>a casa</span></h3>
-			<p class="padding-top-30 col-70">
-				La calidez de nuestra tierra convertida en un espacio que te abraza, te da la bienvenida y parece que nunca se acaba.
-			</p>
-			<div class="padding-top-80">
-				<Button href="/habitaciones" className="small-arrow">ver habitaciones</Button>
+		<div class="padding-top-150">
+			<div class="col-382 inline-block">
+				<h3>Regresa <span>a casa</span></h3>
+				<p class="padding-top-30 col-70">
+					La calidez de nuestra tierra convertida en un espacio que te abraza, te da la bienvenida y parece que nunca se acaba.
+				</p>
+				<div class="padding-top-80">
+					<Button href="/habitaciones" className="small-arrow">ver habitaciones</Button>
+				</div>
 			</div>
-			<div class="padding-top-50"></div>
-		</div>
 
-		<div class="carousel inline-block pull-right">
-			<div class="slide">
-				<Carousel slides={cabins} Carousel={SvelteCarousel} />
+			<div class="carousel inline-block pull-right">
+				<div class="slide">
+					<Carousel slides={cabins} Carousel={SvelteCarousel} />
+				</div>
 			</div>
+			<div class="clear"></div>
 		</div>
-		<div class="clear"></div>
 	</div>
 </div>
 
 
-<div class="block-b">
+<div class="backgroun-light">
 	<div class="content">
-		<div class="row">
+		<div class="row padding-top-200">
 			<div class="image-b-mask">
 				<img src="/homepage/copas_y_vino.jpg" alt="">
 			</div>
@@ -638,45 +752,43 @@
 
 <div class="backgroun-light padding-top-150">
 	<div class="content">
-		<div class="block-d">
-			<div class="carousel inline-block pull-left">
-				<div class="slide">
-					<Carousel slides={slidesB} Carousel={SvelteCarousel} arrows={false} />
+		<div class="green-background">
+			<div class="padding-top-bottom-30">
+				<div class="carousel inline-block pull-left">
+					<div class="slide">
+						<Carousel slides={slidesB} Carousel={SvelteCarousel} arrows={false} />
+					</div>
 				</div>
-			</div>
 
-			<div class="padding-left-60 inline-block pull-right position-relative">
-				<h3 class="padding-top-50">Naturaleza</h3>
+				<div class="padding-left-60 inline-block pull-right position-relative">
+					<h3 class="padding-top-50">Naturaleza</h3>
 
-				<p class="block-4-description">
-					Paisajes que inspiran y nos llenan de orgullo; espacios naturales entre viñedos, vegetación endémica y encinares.
-				</p>
+					<img class="padding-top-50 icon-b" src="/support/icon-b.svg" alt="">
 
-				<img class="padding-top-50 icon-b" src="/support/icon-b.svg" alt="">
-
-				<div class="padding-top-60">
-					<div class="arrows">
-						<div class="col-25">
-							<a class="arrow" href="/" on:click={(event) => arrowClickHandler(event, 'left')}>
-								<img src="/support/arrow-left-white.svg" alt="">
-							</a>
-						</div>
-						<div class="col-25">
-							<a class="arrow" href="/" on:click={event => arrowClickHandler(event, 'right')}>
-								<img src="/support/arrow-right-white.svg" alt="">
-							</a>
+					<div class="padding-top-180">
+						<div class="arrows">
+							<div class="col-25">
+								<a class="arrow" href="/" on:click={(event) => arrowClickHandler(event, 'left')}>
+									<img src="/support/arrow-left-white.svg" alt="">
+								</a>
+							</div>
+							<div class="col-25">
+								<a class="arrow" href="/" on:click={event => arrowClickHandler(event, 'right')}>
+									<img src="/support/arrow-right-white.svg" alt="">
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="clear"></div>
+				<div class="clear"></div>
+			</div>
 		</div>
 	</div>
 </div>
 
 
-<div class="block-e backgroun-light">
+<div class="backgroun-light">
 	<div class="content padding-top-100 text-center">
 		<p class="text-center strong">HOTEL</p>
 
@@ -689,13 +801,48 @@
 
 		<img class="block-center padding-top-20" src="/support/icon-c.png" alt="">
 
-		<p class="block-e-description padding-top-50 col-58 block-center">
+		<p class="padding-top-50 col-58 block-center">
 			Excelencia en cada detalle para que puedas disfrutar del Valle de Guadalupe en todas sus expresiones, desde su clima mediterráneo y sus paisajes espectaculares hasta el sabor de su comida y sus vinos más selectos.
 		</p>
 		<br />
-		<p class="block-e-description text-center col-40 block-center">
+		<p class="text-center col-40 block-center">
 			Una experiencia exclusiva y reconfortante, para celebrar el amor por México y el Valle de Guadalupe.
 		</p>
 	</div>
 	<div class="padding-top-100"></div>
 </div>
+
+
+<div class="green-background">
+	<div class="content-menu">
+		<div class="row padding-top-50">
+			<div>
+				<p class="color-almendra">El hotel de</p>
+				<div class="signature color-blanco">México y el Vino</div>
+				<p class="uppercase color-almendra border-bottom padding-top-20">HOTEL MÉXICO EN LA PIEL &#169;2021</p>
+			</div>
+			<div class="padding-top-10">
+				<img src="/support/logo-r.svg" alt="" class="logo-r">
+			</div>
+			<div>
+				<p class="color-almendra text-right">
+					hola@hotelmexicoenlapiel.com
+				</p>
+				<p class="color-almendra uppercase smaller-text text-right">
+					VALLE DE GUADALUPE, BC, MX.
+				</p>
+				<p class="color-almendra padding-top-50">
+					<a class="link-map" href="https://www.google.com/maps">Google Maps</a>
+					<span class="social-media">
+						<img src="/support/yelp.svg" alt="">
+						<img src="/support/tripadvisor.svg" alt="">
+						<img src="/support/facebook.svg" alt="">
+						<img src="/support/instagram.svg" alt="">
+					</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="padding-top-50"></div>
+</div>
+
