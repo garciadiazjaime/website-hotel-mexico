@@ -95,35 +95,36 @@
       <a href="/reserva">Reserva ahora</a>
     </div>
   </div>
-</div>
-<h3>Despertar con todo<br>México ante tus ojos</h3>
-<div class="image-grid">
-  <div>
-    <p>
-      Una experiencia exclusiva que le permitirá a cada uno de nuestros huéspedes explorar con todos sus sentidos los sabores de México, la riqueza de su tierra y sentir a flor de piel nuestra pasión por la cultura mexicana.
-    </p>
-    <ul>
-      <li>Espacios privados</li>
-      <li>Casas con jacuzzi</li>
-      <li>Servicio a cuarto</li>
-      <li>Seguridad 24 hr</li>
-      <li>Estacionamiento</li>
-      <li>Transporte interno</li>
-    </ul>
+
+  <h3>Despertar con todo<br>México ante tus ojos</h3>
+  <div class="image-grid">
+    <div>
+      <p>
+        Una experiencia exclusiva que le permitirá a cada uno de nuestros huéspedes explorar con todos sus sentidos los sabores de México, la riqueza de su tierra y sentir a flor de piel nuestra pasión por la cultura mexicana.
+      </p>
+      <ul>
+        <li>Espacios privados</li>
+        <li>Casas con jacuzzi</li>
+        <li>Servicio a cuarto</li>
+        <li>Seguridad 24 hr</li>
+        <li>Estacionamiento</li>
+        <li>Transporte interno</li>
+      </ul>
+    </div>
+    <img src="https://picsum.photos/600/400?random=15" alt="" />
   </div>
-  <img src="https://picsum.photos/600/400?random=15" />
+  <hr>
+  <NatureCard data={naturePics} Carousel={Carousel} />
+  <img src="https://picsum.photos/350/240?random=15" alt="" />
+  <p>
+    Excelencia en cada detalle para que puedas disfrutar
+    del Valle de Guadalupe en todas sus expresiones, desde su clima mediterráneo y sus paisajes espectaculares hasta el sabor
+    de su comida y sus vinos más selectos.
+  </p>
+  <p>
+    Una experiencia exclusiva y reconfortante, para celebrar el amor por México y el Valle de Guadalupe.
+  </p>
 </div>
-<hr>
-<NatureCard data={naturePics} Carousel={Carousel} />
-<img src="https://picsum.photos/350/240?random=15" />
-<p>
-  Excelencia en cada detalle para que puedas disfrutar
-  del Valle de Guadalupe en todas sus expresiones, desde su clima mediterráneo y sus paisajes espectaculares hasta el sabor
-  de su comida y sus vinos más selectos.
-</p>
-<p>
-  Una experiencia exclusiva y reconfortante, para celebrar el amor por México y el Valle de Guadalupe.
-</p>
 <style>
   h3 {
     color: white;
