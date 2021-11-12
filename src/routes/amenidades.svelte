@@ -1,6 +1,7 @@
 <script>
   import Header from '../components/Header.svelte';
   import Nav from '../components/Nav.svelte';
+  import NatureCard from '../components/NatureCard.svelte';
   import { onMount } from 'svelte';
 
   let Carousel;
@@ -8,6 +9,11 @@
     const module = await import('svelte-carousel');
     Carousel = module.default;
   });
+
+  const naturePics = [
+    'https://picsum.photos/700/420?random=16',
+    'https://picsum.photos/700/420?random=12',
+  ]
 
   const cabins = [
 		{
@@ -49,7 +55,7 @@
 </div>
 </Header>
 <Nav />
-<div class="gray">
+<div class="main-content">
   <div class="carousel-grid">
     <div>
       <h3>Regresa<br>a casa</h3>
@@ -108,7 +114,16 @@
   <img src="https://picsum.photos/600/400?random=15" />
 </div>
 <hr>
-
+<NatureCard data={naturePics} Carousel={Carousel} />
+<img src="https://picsum.photos/350/240?random=15" />
+<p>
+  Excelencia en cada detalle para que puedas disfrutar
+  del Valle de Guadalupe en todas sus expresiones, desde su clima mediterráneo y sus paisajes espectaculares hasta el sabor
+  de su comida y sus vinos más selectos.
+</p>
+<p>
+  Una experiencia exclusiva y reconfortante, para celebrar el amor por México y el Valle de Guadalupe.
+</p>
 <style>
   h3 {
     color: white;
@@ -126,8 +141,7 @@
     text-decoration: none;
   }
 
-  .gray {
-    background: lightgray;
+  .main-content {
     padding: 130px 50px 0;
   }
   .carousel-grid {
@@ -140,7 +154,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
-    margin-bottom: -180px;
   }
   .cabin {
     position: relative;
