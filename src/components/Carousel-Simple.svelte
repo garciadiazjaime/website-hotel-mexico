@@ -27,6 +27,7 @@
 		width: 100%;
 		font-size: 15px;
 		font-family: gotham;
+    margin-bottom: 0;
 	}
 	.slide span {
 		position: absolute;
@@ -37,6 +38,7 @@
 		color: white;
 		font-family: trento;
 		font-size: 9px;
+    line-height: 40px;
 	}
 
   .arrow-control {
