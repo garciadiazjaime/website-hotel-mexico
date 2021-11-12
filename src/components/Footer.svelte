@@ -150,9 +150,6 @@
 						<a href="https://www.airbnb.com/users/200220394/listings" target="_blank">
 							<img src="/support/airbnb.svg" alt="">
 						</a>
-						<a href="https://www.booking.com/hotel/mx/mexico-en-la-piel.es.html?label=gen173nr-1BCAsooAFCEW1leGljby1lbi1sYS1waWVsSDNYBGigAYgBAZgBCrgBB8gBDNgBAegBAYgCAagCA7gC88KwjAbAAgHSAiQ5ZjdiMTA5OC1mMzA0LTQ1MTUtOWQ3My01ZTcxODczODRmMWLYAgXgAgE;sid=f79a7c6169d5313812f64748582de0c8;dist=0;keep_landing=1;sb_price_type=total;type=total;sig=v1C_O5gL6c&" target="_blank">
-							<img src="/support/booking.svg" alt="">
-						</a>
 						<a href="https://www.facebook.com/hotelmexicoenlapiel" target="_blank">
 							<img src="/support/facebook.svg" alt="">
 						</a>
