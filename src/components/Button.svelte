@@ -2,6 +2,7 @@
   export let href
   export let target
   export let className
+  export let onclick
 
 </script>
 
@@ -17,7 +18,10 @@
     font-size: 14px;
     line-height: 14px;
   }
-  .small-arrow {
+  .color-almendra {
+    color: var(--color-almendra);
+  }
+  .small-arrow, .small-arrow-almendra {
     padding: 18px 42px 18px 20px;
   }
   .large-arrow {
@@ -31,7 +35,7 @@
     width: 60px;
     background-color: white;
     height: 1px;
-    top: 23px;
+    top: 50%;
     display: block;
     right: 20px;
     position: absolute;
@@ -43,11 +47,24 @@
     border-right: 1px solid white;
     transform: rotate(45deg) translateY(-50%);
     height: 7px;
-    top: 23px;
+    top: 50%;
+    display: block;
+    right: 23px;
+    position: absolute;
+  }
+
+  .small-arrow-almendra:after {
+    content: '';
+    width: 7px;
+    border-top: 1px solid var(--color-almendra);;
+    border-right: 1px solid var(--color-almendra);;
+    transform: rotate(45deg) translateY(-50%);
+    height: 7px;
+    top: 50%;
     display: block;
     right: 23px;
     position: absolute;
   }
 </style>
 
-<a class={className} href={href} target={target}><slot></slot></a>
+<a on:click={onclick} class={className} href={href} target={target}><slot></slot></a>
