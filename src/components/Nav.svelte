@@ -175,8 +175,8 @@
 		<nav class={isOpen ? 'visible' : 'hide'}>
 			<ul>
 				<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">inicio</a></li>
-				<!-- <li><a aria-current="{segment === 'habitaciones' ? 'page' : undefined}" href="habitaciones">habitaciones</a></li>
-				<li><a aria-current="{segment === 'cava-cocina' ? 'page' : undefined}" href="cava-cocina">cava y cocina</a></li>
+				<li><a aria-current="{segment === 'habitaciones' ? 'page' : undefined}" href="habitaciones">habitaciones</a></li>
+				<!-- <li><a aria-current="{segment === 'cava-cocina' ? 'page' : undefined}" href="cava-cocina">cava y cocina</a></li>
 				<li><a aria-current="{segment === 'amenidades' ? 'page' : undefined}" href="amenidades">amenidades</a></li> -->
 				<li><a aria-current="{segment === 'contacto' ? 'page' : undefined}" href="contacto">contacto</a></li>
 				<li><a href="https://www.airbnb.com/users/200220394/listings" target="_blank">reserva</a></li>

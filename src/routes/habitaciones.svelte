@@ -12,19 +12,39 @@
 
 	const cabins = [
 		{
-			name: 'Sonora',
+			name: 'Baja California Sur',
 			images: [
 				{
-				 path: 'https://picsum.photos/1000/400?random=1',
+				 path: '/habitaciones/01-Baja-California-Sur/01-MEXP_Baja-California-Sur-(1920x1080)_exterior.jpg',
 				 id: 'son1',
 				},
 				{
-				 path: 'https://picsum.photos/1000/400?random=2',
-				 id: 'son2',
+				 path: '/habitaciones/01-Baja-California-Sur/02-MEXP_Baja-California-Sur-(1920x1080)_exterior.jpg',
+				 id: 'son1',
 				},
 				{
-				 path: 'https://picsum.photos/1000/400?random=3',
-				 id: 'son3',
+				 path: '/habitaciones/01-Baja-California-Sur/03-MEXP_Baja-California-Sur-(1920x1080)_interior.jpg',
+				 id: 'son1',
+				},
+				{
+				 path: '/habitaciones/01-Baja-California-Sur/04-MEXP_Baja-California-Sur-(1920x1080)_interior.jpg',
+				 id: 'son1',
+				},
+				{
+				 path: '/habitaciones/01-Baja-California-Sur/05-MEXP_Baja-California-Sur-(1920x1080)_interior.jpg',
+				 id: 'son1',
+				},
+				{
+				 path: '/habitaciones/01-Baja-California-Sur/06-MEXP_Baja-California-Sur-(1920x1080)_interior.jpg',
+				 id: 'son1',
+				},
+				{
+				 path: '/habitaciones/01-Baja-California-Sur/07-MEXP_Baja-California-Sur-(1920x1080)_interior.jpg',
+				 id: 'son1',
+				},
+				{
+				 path: '/habitaciones/01-Baja-California-Sur/08-MEXP_Baja-California-Sur-(1920x1080)_interior.jpg',
+				 id: 'son1',
 				},
 			],
 			caracteristicas: [
@@ -41,138 +61,8 @@
 				'Internet (wi-fi)',
 				'Aire (AC)',
 			],
-			reservationUrl: 'http://reservationurl.com',
+			reservationUrl: 'https://www.airbnb.com/users/200220394/listings',
 		},
-		{
-			name: 'Sinaloa',
-			images: [
-				{
-				 path: 'https://picsum.photos/1000/400?random=4',
-				 id: 'sin1',
-				},
-				{
-				 path: 'https://picsum.photos/1000/400?random=5',
-				 id: 'sin2',
-				},
-				{
-				 path: 'https://picsum.photos/1000/400?random=6',
-				 id: 'sin3',
-				},
-			],
-			caracteristicas: [
-				'Cama queen size',
-				'Baño y regadera',
-				'Sala con chimenea',
-				'Barra comedor',
-				'Patio terraza',
-			],
-			amenidades: [
-				'Limpieza',
-				'Refrigerador',
-				'Televisión',
-				'Internet (wi-fi)',
-				'Aire (AC)',
-			],
-			reservationUrl: 'http://reservationurl.com',
-		},
-		{
-			name: 'Chihuahua',
-			images: [
-				{
-				 path: 'https://picsum.photos/1000/400?random=7',
-				 id: 'chi1',
-				},
-				{
-				 path: 'https://picsum.photos/1000/400?random=8',
-				 id: 'chi2',
-				},
-				{
-				 path: 'https://picsum.photos/1000/400?random=39',
-				 id: 'chi3',
-				},
-			],
-			caracteristicas: [
-				'Cama queen size',
-				'Baño y regadera',
-				'Sala con chimenea',
-				'Barra comedor',
-				'Patio terraza',
-			],
-			amenidades: [
-				'Limpieza',
-				'Refrigerador',
-				'Televisión',
-				'Internet (wi-fi)',
-				'Aire (AC)',
-			],
-			reservationUrl: 'http://reservationurl.com',
-		},
-		{
-			name: 'Durango',
-			images: [
-				{
-				 path: 'https://picsum.photos/1000/400?random=19',
-				 id: 'dur1',
-				},
-				{
-				 path: 'https://picsum.photos/1000/400?random=28',
-				 id: 'dur2',
-				},
-				{
-				 path: 'https://picsum.photos/1000/400?random=37',
-				 id: 'dur3',
-				},
-			],
-			caracteristicas: [
-				'Cama queen size',
-				'Baño y regadera',
-				'Sala con chimenea',
-				'Barra comedor',
-				'Jacuzzi exterior',
-				'Patio terraza',
-			],
-			amenidades: [
-				'Limpieza',
-				'Refrigerador',
-				'Televisión',
-				'Internet (wi-fi)',
-				'Aire (AC)',
-			],
-			reservationUrl: 'http://reservationurl.com',
-		},
-		{
-			name: 'Coahuila',
-			images: [
-				{
-				 path: 'https://picsum.photos/1000/400?random=16',
-				 id: 'coa1',
-				},
-				{
-				 path: 'https://picsum.photos/1000/400?random=25',
-				 id: 'coa2',
-				},
-				{
-				 path: 'https://picsum.photos/1000/400?random=34',
-				 id: 'coa3',
-				},
-			],
-			caracteristicas: [
-				'Cama queen size',
-				'Baño y regadera',
-				'Sala con chimenea',
-				'Barra comedor',
-				'Jacuzzi exterior',
-				'Patio terraza',
-			],
-			amenidades: [
-				'Limpieza',
-				'Refrigerador',
-				'Televisión',
-				'Internet (wi-fi)',
-				'Aire (AC)',
-			],
-			reservationUrl: 'http://reservationurl.com',
-		}
 	];
 </script>
 
