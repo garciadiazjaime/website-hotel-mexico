@@ -130,36 +130,6 @@
 		margin: 0 auto 80px;
 		color: black;
 	}
-	.ver-mas {
-		display: block;
-		margin: 0 auto;
-		text-align: center;
-		color: var(--color-almendra);
-		text-transform: uppercase;
-		position: relative;
-		margin-bottom: 30px;
-		padding-bottom: 40px;
-		text-decoration: none;
-	}
-	.ver-mas:before, .ver-mas:after {
-		content: '';
-		border-right: 1px solid var(--color-almendra);
-		border-bottom: 1px solid var(--color-almendra);
-		transform: rotate(45deg) translateX(-50%);
-		position: absolute;
-		left: 50%;
-		border-radius: 3px;
-	}
-	.ver-mas:before {
-		width: 30px;
-		height: 30px;
-		bottom: 0;
-	}
-	.ver-mas:after {
-		width: 24px;
-		height: 24px;
-		bottom: 8px;
-	}
 </style>
 <div class="main">
 	<Content>
@@ -172,6 +142,5 @@
 		{#each cabins as cabin}
 			<CabinCard cabinData={cabin} Carousel={Carousel} />
 		{/each}
-		<a class='ver-mas' href='/'>Ver más</a>
 	</div>
 </div>
