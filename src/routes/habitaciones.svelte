@@ -1,4 +1,5 @@
 <script>
+	import Content from '../components/Content.svelte'
 	import Subheader from '../components/Subheader.svelte';
 	import CabinCard from '../components/CabinCard.svelte';
 
@@ -68,25 +69,16 @@
 
 <style>
 	.main {
-		background: white;
-		padding:30px 20px 60px;
+		margin-top: 40px;
+		font-family: gotham;
+		font-size: 18px;
 	}
 	.catalog {
-		background: lightgray;
+		background-color: var(--color-hueso);
 		margin: 0 auto;
 		position: relative;
-	}
-
-	.catalog:before {
-		content: '';
-		display: block;
-		width: 100%;
-		height: 40px;
-		background-color: white;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 0;
+		margin-top: 100px;
+		padding-top: 100px;
 	}
 	hr {
 		border: none;
@@ -95,7 +87,6 @@
 		width: 1px;
 		height: 1px;
 		overflow: visible;
-
 	}
 	hr:before {
 		content: '';
@@ -105,9 +96,9 @@
 		top: 0;
 		width: 30px;
 		height: 30px;
-		border-color: goldenrod;
-		border-top: solid 1px goldenrod;
-		border-right: solid 1px goldenrod;
+		border-color: var(--color-almendra);
+		border-top: solid 1px var(--color-almendra);
+		border-right: solid 1px var(--color-almendra);
 		transform: rotate(-45deg);
 	}
 	hr:after {
@@ -120,18 +111,21 @@
 		height: 30px;
 		background: none;
 		margin: 0 auto;
-		border-color: goldenrod;
-		border-bottom: solid 1px goldenrod;
-		border-left: solid 1px goldenrod;
+		border-color: var(--color-almendra);
+		border-bottom: solid 1px var(--color-almendra);
+		border-left: solid 1px var(--color-almendra);
 		transform: rotate(-45deg);
 	}
 	h1 {
-		color: goldenrod;
+		color: var(--color-almendra);
 		text-align: center;
 		margin: 60px 0 40px;
+		font-family: mirage;
+		font-weight: 200;
+		font-size: 50px;
 	}
 	p {
-		max-width: 50%;
+		max-width: 570px;
 		text-align: center;
 		margin: 0 auto 80px;
 		color: black;
@@ -140,7 +134,7 @@
 		display: block;
 		margin: 0 auto;
 		text-align: center;
-		color: goldenrod;
+		color: var(--color-almendra);
 		text-transform: uppercase;
 		position: relative;
 		margin-bottom: 30px;
@@ -149,8 +143,8 @@
 	}
 	.ver-mas:before, .ver-mas:after {
 		content: '';
-		border-right: 1px solid goldenrod;
-		border-bottom: 1px solid goldenrod;
+		border-right: 1px solid var(--color-almendra);
+		border-bottom: 1px solid var(--color-almendra);
 		transform: rotate(45deg) translateX(-50%);
 		position: absolute;
 		left: 50%;
@@ -167,16 +161,17 @@
 		bottom: 8px;
 	}
 </style>
-
-<div class='main'>
-	<Subheader color="goldenrod">Habitaciones</Subheader>
-	<h1>Amar al Valle es amar a México</h1>
-	<hr>
-	<p>Cómodas habitaciones te darán la bienvenida, amenidades de lujo y un staff de primer nivel harán de tu estancia una experiencia inolvidable.</p>
-</div>
-<div class="catalog">
-	{#each cabins as cabin}
-		<CabinCard cabinData={cabin} Carousel={Carousel} />
-	{/each}
-	<a class='ver-mas' href='/'>Ver más</a>
+<div class="main">
+	<Content>
+		<Subheader color="var(--color-almendra)">Habitaciones</Subheader>
+		<h1>Amar al Valle es amar a México</h1>
+		<hr>
+		<p>Cómodas habitaciones te darán la bienvenida, amenidades de lujo y un staff de primer nivel harán de tu estancia una experiencia inolvidable.</p>
+	</Content>
+	<div class="catalog">
+		{#each cabins as cabin}
+			<CabinCard cabinData={cabin} Carousel={Carousel} />
+		{/each}
+		<a class='ver-mas' href='/'>Ver más</a>
+	</div>
 </div>
