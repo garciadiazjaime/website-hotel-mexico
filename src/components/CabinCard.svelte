@@ -3,6 +3,7 @@
   import Share from './Share.svelte'
 
   export let Carousel;
+  export let Lazy;
   export let cabinData;
 </script>
 <style>
@@ -86,6 +87,11 @@
     position: relative;
     margin-bottom: 25px;
   }
+  @media (min-width: 960px) {
+    .carousel-container {
+      min-height: 640px;
+    }
+  }
   ul {
     padding-left: 0;
     list-style: none;
@@ -156,31 +162,33 @@
   }
 </style>
 <div class="carousel-container">
-  <div class="images">
-    <svelte:component
-      this={Carousel}
-      dots={false}
-      autoplayDuration={5000}
-      let:showPrevPage
-      let:showNextPage
-      let:currentPageIndex
-      let:pagesCount
-      let:showPage
-    >
-      <div slot="prev" on:click={showPrevPage} class='arrow-control arrow-control-prev'></div>
-        {#each cabinData.images as img}
-          <img src={img.path} alt={img.id} id={img.id} />
-        {/each}
-        <div slot="next" on:click={showNextPage} class='arrow-control arrow-control-next'></div>
-        <div slot="dots" class="nav-dots">
-        {#each Array(pagesCount) as _, pageIndex (pageIndex)}
-          <div class="nav-dot {currentPageIndex === pageIndex ? 'active' : ''}"
-            on:click={() => showPage(pageIndex)}
-          ></div>
-        {/each}
-      </div>
-    </svelte:component>
-  </div>
+  <svelte:component this={Lazy} height={300}>
+    <div class="images">
+      <svelte:component
+        this={Carousel}
+        dots={false}
+        autoplayDuration={5000}
+        let:showPrevPage
+        let:showNextPage
+        let:currentPageIndex
+        let:pagesCount
+        let:showPage
+      >
+        <div slot="prev" on:click={showPrevPage} class='arrow-control arrow-control-prev'></div>
+          {#each cabinData.images as img}
+            <img src={img.path} alt={img.id} id={img.id} />
+          {/each}
+          <div slot="next" on:click={showNextPage} class='arrow-control arrow-control-next'></div>
+          <div slot="dots" class="nav-dots">
+          {#each Array(pagesCount) as _, pageIndex (pageIndex)}
+            <div class="nav-dot {currentPageIndex === pageIndex ? 'active' : ''}"
+              on:click={() => showPage(pageIndex)}
+            ></div>
+          {/each}
+        </div>
+      </svelte:component>
+    </div>
+  </svelte:component>
 </div>
 <Content>
   <div class="title">

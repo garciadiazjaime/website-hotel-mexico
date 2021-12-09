@@ -8,9 +8,13 @@
 
 
   let Carousel;
+	let Lazy
   onMount(async () => {
     const module = await import('svelte-carousel');
     Carousel = module.default;
+
+		const moduleLazy = await import('svelte-lazy');
+    Lazy = moduleLazy.default;
   });
 </script>
 
@@ -87,7 +91,7 @@
 	</Content>
 	<div class="catalog">
 		{#each cabins as cabin}
-			<CabinCard cabinData={cabin} Carousel={Carousel} />
+			<CabinCard cabinData={cabin} Carousel={Carousel} Lazy={Lazy} />
 		{/each}
 	</div>
 </div>
