@@ -1,70 +1,17 @@
 <script>
+	import { onMount } from 'svelte';
+
 	import Content from '../components/Content.svelte'
 	import Subheader from '../components/Subheader.svelte';
 	import CabinCard from '../components/CabinCard.svelte';
+	import cabins from '../support/cabins'
 
-	import { onMount } from 'svelte';
 
   let Carousel;
   onMount(async () => {
     const module = await import('svelte-carousel');
     Carousel = module.default;
   });
-
-	const cabins = [
-		{
-			name: 'Baja California Sur',
-			images: [
-				{
-				 path: '/habitaciones/01-Baja-California-Sur/01-MEXP_Baja-California-Sur-(1920x1080)_exterior.jpg',
-				 id: 'son1',
-				},
-				{
-				 path: '/habitaciones/01-Baja-California-Sur/02-MEXP_Baja-California-Sur-(1920x1080)_exterior.jpg',
-				 id: 'son1',
-				},
-				{
-				 path: '/habitaciones/01-Baja-California-Sur/03-MEXP_Baja-California-Sur-(1920x1080)_interior.jpg',
-				 id: 'son1',
-				},
-				{
-				 path: '/habitaciones/01-Baja-California-Sur/04-MEXP_Baja-California-Sur-(1920x1080)_interior.jpg',
-				 id: 'son1',
-				},
-				{
-				 path: '/habitaciones/01-Baja-California-Sur/05-MEXP_Baja-California-Sur-(1920x1080)_interior.jpg',
-				 id: 'son1',
-				},
-				{
-				 path: '/habitaciones/01-Baja-California-Sur/06-MEXP_Baja-California-Sur-(1920x1080)_interior.jpg',
-				 id: 'son1',
-				},
-				{
-				 path: '/habitaciones/01-Baja-California-Sur/07-MEXP_Baja-California-Sur-(1920x1080)_interior.jpg',
-				 id: 'son1',
-				},
-				{
-				 path: '/habitaciones/01-Baja-California-Sur/08-MEXP_Baja-California-Sur-(1920x1080)_interior.jpg',
-				 id: 'son1',
-				},
-			],
-			caracteristicas: [
-				'Cama queen size',
-				'Baño y regadera',
-				'Sala con chimenea',
-				'Barra comedor',
-				'Patio terraza',
-			],
-			amenidades: [
-				'Limpieza',
-				'Refrigerador',
-				'Televisión',
-				'Internet (wi-fi)',
-				'Aire (AC)',
-			],
-			reservationUrl: 'https://www.airbnb.com/users/200220394/listings',
-		},
-	];
 </script>
 
 <style>
