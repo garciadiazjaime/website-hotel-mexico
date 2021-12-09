@@ -1,5 +1,6 @@
 <script>
   import Content from './Content.svelte'
+  import Share from './Share.svelte'
 
   export let Carousel;
   export let cabinData;
@@ -18,6 +19,7 @@
     flex-direction: row;
     align-content: flex-start;
     margin-bottom: 80px;
+    font-size: 14px;
   }
   .col {
     flex-grow: 1;
@@ -146,6 +148,12 @@
     background-color: var(--color-almendra);
     cursor: pointer;
   }
+  .social-media {
+    position: relative;
+  }  
+  .clear {
+    clear: both;
+  }
 </style>
 <div class="carousel-container">
   <div class="images">
@@ -202,6 +210,10 @@
           <li>{amenidad}</li>
         {/each}
       </ul>
+    </div>
+    <div class="col social-media">
+      <Share />
+      <br class="clear">
     </div>
   </div>
 </Content>
