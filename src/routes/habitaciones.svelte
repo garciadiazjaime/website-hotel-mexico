@@ -1,7 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
 
-	import Content from '../components/Content.svelte'
 	import Subheader from '../components/Subheader.svelte';
 	import CabinCard from '../components/CabinCard.svelte';
 	import cabins from '../support/cabins'
@@ -23,6 +22,12 @@
 		margin-top: 40px;
 		font-family: gotham;
 		font-size: 18px;
+	}
+	.content {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 140px;
+		box-sizing: border-box;
 	}
 	.catalog {
 		background-color: var(--color-hueso);
@@ -81,14 +86,28 @@
 		margin: 0 auto 80px;
 		color: black;
 	}
+
+	:global(body) {
+		background: var(--color-hueso);
+	}
+
+	@media (max-width: 960px) {
+    .content {
+      padding: 12px;
+    }
+		.catalog {
+      padding: 0;
+			margin-top: 0;
+    }
+  }
 </style>
 <div class="main">
-	<Content>
+	<div class="content">
 		<Subheader color="var(--color-almendra)">Habitaciones</Subheader>
 		<h1>Amar al Valle es amar a México</h1>
 		<hr>
 		<p>Cómodas habitaciones te darán la bienvenida, amenidades de lujo y un staff de primer nivel harán de tu estancia una experiencia inolvidable.</p>
-	</Content>
+	</div>
 	<div class="catalog">
 		{#each cabins as cabin}
 			<CabinCard cabinData={cabin} Carousel={Carousel} Lazy={Lazy} />

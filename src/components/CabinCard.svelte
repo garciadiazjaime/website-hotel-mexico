@@ -1,5 +1,4 @@
 <script>
-  import Content from './Content.svelte'
   import Share from './Share.svelte'
 
   export let Carousel;
@@ -7,6 +6,12 @@
   export let cabinData;
 </script>
 <style>
+  .content {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 100px;
+		box-sizing: border-box;
+	}
   ul {
     columns: 2;
   }
@@ -160,6 +165,18 @@
   .clear {
     clear: both;
   }
+
+  @media (max-width: 1080px) {
+    .content {
+      padding: 12px;
+    }
+    h3 {
+      font-size: 3px;
+    }
+    .col-container {
+      display: block;
+    }
+  }
 </style>
 <div class="carousel-container">
   <svelte:component this={Lazy} height={300}>
@@ -190,7 +207,8 @@
     </div>
   </svelte:component>
 </div>
-<Content>
+
+<div class="content">
   <div class="title">
     <div>
       <span>Casa</span>
@@ -224,4 +242,4 @@
       <br class="clear">
     </div>
   </div>
-</Content>
+</div>

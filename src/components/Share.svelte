@@ -70,6 +70,16 @@
     width: 20px;
     height: 20px;
   }
+  @media (max-width: 1080px) {
+    .share {
+      float: none;
+    }
+    .logos {
+      top: 0;
+      left: 85px;
+      right: initial;
+    }
+  }
 </style>
 
 <a href="/" class="share" on:click={clickHandlerShare}>Share</a>
