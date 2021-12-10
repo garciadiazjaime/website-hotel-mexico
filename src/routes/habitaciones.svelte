@@ -19,14 +19,16 @@
 
 <style>
 	.main {
-		margin-top: 40px;
 		font-family: gotham;
 		font-size: 18px;
 	}
+	.background-white {
+		background-color: white;
+	}
 	.content {
 		max-width: 1280px;
-		margin: 0 auto;
-		padding: 0 50px;
+		margin: 0px auto;
+		padding: 40px 50px 100px;
 		box-sizing: border-box;
 	}
 	.intro {
@@ -36,7 +38,6 @@
 		background-color: var(--color-hueso);
 		margin: 0 auto;
 		position: relative;
-		margin-top: 100px;
 		padding-top: 100px;
 	}
 	hr {
@@ -86,7 +87,7 @@
 	p {
 		max-width: 570px;
 		text-align: center;
-		margin: 0 auto 80px;
+		margin: 0 auto;
 		color: black;
 	}
 
@@ -95,9 +96,6 @@
 	}
 
 	@media (max-width: 960px) {
-    .content {
-      padding: 12px;
-    }
 		.intro {
 			padding: 0;
 		}
@@ -108,12 +106,14 @@
   }
 </style>
 <div class="main">
-	<div class="content">
-		<Subheader color="var(--color-almendra)">Habitaciones</Subheader>
-		<div class="intro">
-			<h1>Amar al Valle es amar a México</h1>
-			<hr>
-			<p>Cómodas habitaciones te darán la bienvenida, amenidades de lujo y un staff de primer nivel harán de tu estancia una experiencia inolvidable.</p>
+	<div class="background-white">
+		<div class="content">
+			<Subheader color="var(--color-almendra)">Habitaciones</Subheader>
+			<div class="intro">
+				<h1>Amar al Valle es amar a México</h1>
+				<hr>
+				<p>Cómodas habitaciones te darán la bienvenida, amenidades de lujo y un staff de primer nivel harán de tu estancia una experiencia inolvidable.</p>
+			</div>
 		</div>
 	</div>
 	<div class="catalog">
