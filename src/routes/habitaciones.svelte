@@ -26,8 +26,11 @@
 	.content {
 		max-width: 1280px;
 		margin: 0 auto;
-		padding: 0 140px;
+		padding: 0 50px;
 		box-sizing: border-box;
+	}
+	.intro {
+		padding: 0 140px;
 	}
 	.catalog {
 		background-color: var(--color-hueso);
@@ -95,6 +98,9 @@
     .content {
       padding: 12px;
     }
+		.intro {
+			padding: 0;
+		}
 		.catalog {
       padding: 0;
 			margin-top: 0;
@@ -104,9 +110,11 @@
 <div class="main">
 	<div class="content">
 		<Subheader color="var(--color-almendra)">Habitaciones</Subheader>
-		<h1>Amar al Valle es amar a México</h1>
-		<hr>
-		<p>Cómodas habitaciones te darán la bienvenida, amenidades de lujo y un staff de primer nivel harán de tu estancia una experiencia inolvidable.</p>
+		<div class="intro">
+			<h1>Amar al Valle es amar a México</h1>
+			<hr>
+			<p>Cómodas habitaciones te darán la bienvenida, amenidades de lujo y un staff de primer nivel harán de tu estancia una experiencia inolvidable.</p>
+		</div>
 	</div>
 	<div class="catalog">
 		{#each cabins as cabin}
