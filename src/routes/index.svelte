@@ -4,6 +4,7 @@
 	import Nav from '../components/Nav.svelte';
 	import Button from '../components/Button.svelte'
 	import Carousel from '../components/Carousel-Simple.svelte';
+	import links from '../support/links'
 
 	let SvelteCarousel;
   onMount(async () => {
@@ -545,7 +546,7 @@
 		<div class="content-menu col-100">
 			<div class="header">
 				<h2>HOTEL MÉXICO EN LA PIEL <span>®</span></h2>
-				<div><a href="http://www.airbnb.com/p/hotelmexicoenlapiel" target="_blank">RESERVA</a></div>
+				<div><a href={links.reserva} target="_blank">RESERVA</a></div>
 			</div>
 
 			<div class="title">
@@ -593,7 +594,7 @@
 				<br />
 				<p class="col-75">Te invitamos a celebrar nuestra cultura y disfrutar de nuestra tierra.</p>
 				<div class="padding-top-100">
-					<Button href="http://www.airbnb.com/p/hotelmexicoenlapiel" className="large-arrow" target="_blank">reserva ahora</Button>
+					<Button href={links.reserva} className="large-arrow" target="_blank">reserva ahora</Button>
 				</div>
 			</div>
 		</div>

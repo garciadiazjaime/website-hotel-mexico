@@ -1,6 +1,7 @@
 <script>
   import Header from '../components/Header.svelte';
   import Button from '../components/Button.svelte'
+  import link from '../support/links'
 
   let name = ''
   let email = ''
@@ -323,7 +324,7 @@
 
 <section class="block-2">
   <div class="content">
-    <a class="reserva" href="http://www.airbnb.com/p/hotelmexicoenlapiel" target="_blank">reserva ahora</a>
+    <a class="reserva" href={link.reserva} target="_blank">reserva ahora</a>
 
     <p class="note">
       *Reservaciones deben de hacerse con 15 días <br /> de anticipación para confirmar y procesar.

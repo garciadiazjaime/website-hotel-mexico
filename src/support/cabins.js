@@ -1,3 +1,5 @@
+import links from './links'
+
 const cabins = [
   {
     name: 'Baja California Sur',
@@ -49,7 +51,7 @@ const cabins = [
       'Internet (wi-fi)',
       'Aire (AC)',
     ],
-    reservationUrl: 'https://www.airbnb.com/users/200220394/listings',
+    reservationUrl: links.reserva,
   },
   {
     name: 'Sonora',
@@ -101,7 +103,7 @@ const cabins = [
       'Internet (wi-fi)',
       'Aire (AC)',
     ],
-    reservationUrl: 'http://reservationurl.com',
+    reservationUrl: links.reserva,
   },
   {
     name: 'Sinaloa',
@@ -158,7 +160,7 @@ const cabins = [
       'Internet (wi-fi)',
       'Aire (AC)',
     ],
-    reservationUrl: 'http://reservationurl.com',
+    reservationUrl: links.reserva,
   },
   {
     name: 'Chihuahua',
@@ -215,7 +217,7 @@ const cabins = [
       'Internet (wi-fi)',
       'Aire (AC)',
     ],
-    reservationUrl: 'http://reservationurl.com',
+    reservationUrl: links.reserva,
   },
   {
     name: 'Durango',
@@ -272,7 +274,7 @@ const cabins = [
       'Internet (wi-fi)',
       'Aire (AC)',
     ],
-    reservationUrl: 'http://reservationurl.com',
+    reservationUrl: links.reserva,
   },
   {
     name: 'Zacatecas',
@@ -328,7 +330,7 @@ const cabins = [
       'Internet (wi-fi)',
       'Aire (AC)',
     ],
-    reservationUrl: 'http://reservationurl.com',
+    reservationUrl: links.reserva,
   }
 ];
 
