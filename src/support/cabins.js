@@ -264,7 +264,6 @@ const cabins = [
       'Baño y regadera',
       'Sala con chimenea',
       'Barra comedor',
-      'Jacuzzi exterior',
       'Patio terraza',
     ],
     amenidades: [
