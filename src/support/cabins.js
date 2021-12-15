@@ -5,7 +5,7 @@ const cabins = [
     name: 'Baja California Sur',
     images: [
       {
-       path: '/habitaciones/01-Baja-California-Sur/01-MEXP_Baja-California-Sur-(1920x1080)_exterior.jpg',
+       path: '/habitaciones/01-Baja-California-Sur/08-MEXP_Baja-California-Sur-(1920x1080)_interior.jpg',
        id: 'son1',
       },
       {
@@ -33,7 +33,7 @@ const cabins = [
        id: 'son1',
       },
       {
-       path: '/habitaciones/01-Baja-California-Sur/08-MEXP_Baja-California-Sur-(1920x1080)_interior.jpg',
+       path: '/habitaciones/01-Baja-California-Sur/01-MEXP_Baja-California-Sur-(1920x1080)_exterior.jpg',
        id: 'son1',
       },
     ],
@@ -57,7 +57,7 @@ const cabins = [
     name: 'Sonora',
     images: [
       {
-       path: '/habitaciones/02-Sonora/01-MEXP_Sonora-(1920x1080)_exterior.jpg',
+       path: '/habitaciones/02-Sonora/08-MEXP_Sonora-(1920x1080)_interior.jpg',
        id: 'sin1',
       },
       {
@@ -85,7 +85,7 @@ const cabins = [
         id: 'sin3',
        },
        {
-        path: '/habitaciones/02-Sonora/08-MEXP_Sonora-(1920x1080)_interior.jpg',
+        path: '/habitaciones/02-Sonora/01-MEXP_Sonora-(1920x1080)_exterior.jpg',
         id: 'sin3',
        },
     ],
@@ -109,7 +109,7 @@ const cabins = [
     name: 'Sinaloa',
     images: [
       {
-       path: '/habitaciones/03-Sinaloa/01-MEXP_Sinaloa-(1920x1080)_exterior.jpg',
+       path: '/habitaciones/03-Sinaloa/05-MEXP_Sinaloa-(1920x1080)_interior.jpg',
        id: 'chi1',
       },
       {
@@ -125,7 +125,7 @@ const cabins = [
         id: 'chi3',
       },
       {
-        path: '/habitaciones/03-Sinaloa/05-MEXP_Sinaloa-(1920x1080)_interior.jpg',
+        path: '/habitaciones/03-Sinaloa/01-MEXP_Sinaloa-(1920x1080)_exterior.jpg',
         id: 'chi3',
       },
       {
@@ -166,7 +166,7 @@ const cabins = [
     name: 'Chihuahua',
     images: [
       {
-       path: '/habitaciones/04-Chihuahua/01-MEXP_Chihuahua-(1920x1080)_exterior.jpg',
+       path: '/habitaciones/04-Chihuahua/04-MEXP_Chihuahua-(1920x1080)_interior.jpg',
        id: 'dur1',
       },
       {
@@ -178,7 +178,7 @@ const cabins = [
        id: 'dur1',
       },
       {
-       path: '/habitaciones/04-Chihuahua/04-MEXP_Chihuahua-(1920x1080)_interior.jpg',
+       path: '/habitaciones/04-Chihuahua/01-MEXP_Chihuahua-(1920x1080)_exterior.jpg',
        id: 'dur1',
       },
       {
@@ -223,7 +223,7 @@ const cabins = [
     name: 'Durango',
     images: [
       {
-       path: '/habitaciones/05-Durango/01-MEXP_Durango-(1920x1080)_exterior.jpg',
+       path: '/habitaciones/05-Durango/03-MEXP_Durango-(1920x1080)_interior.jpg',
        id: 'coa1',
       },
       {
@@ -231,7 +231,7 @@ const cabins = [
        id: 'coa1',
       },
       {
-       path: '/habitaciones/05-Durango/03-MEXP_Durango-(1920x1080)_interior.jpg',
+       path: '/habitaciones/05-Durango/01-MEXP_Durango-(1920x1080)_exterior.jpg',
        id: 'coa1',
       },
       {
@@ -280,7 +280,7 @@ const cabins = [
     name: 'Zacatecas',
     images: [
       {
-       path: '/habitaciones/06-Zacatecas/01-MEXP_Zacatecas-(1920x1080)_exterior.jpg',
+       path: '/habitaciones/06-Zacatecas/09-MEXP_Zacatecas-(1920x1080)_interior.jpg',
        id: 'coa1',
       },
       {
@@ -312,7 +312,7 @@ const cabins = [
        id: 'coa1',
       },
       {
-       path: '/habitaciones/06-Zacatecas/09-MEXP_Zacatecas-(1920x1080)_interior.jpg',
+       path: '/habitaciones/06-Zacatecas/01-MEXP_Zacatecas-(1920x1080)_exterior.jpg',
        id: 'coa1',
       },
     ],
