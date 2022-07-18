@@ -38,7 +38,7 @@ const cabins = [
       },
     ],
     caracteristicas: [
-      'Cama queen size',
+      'Cama king size',
       'Baño y regadera',
       'Sala con chimenea',
       'Barra comedor',
@@ -90,7 +90,7 @@ const cabins = [
        },
     ],
     caracteristicas: [
-      'Cama queen size',
+      'Cama king size',
       'Baño y regadera',
       'Sala con chimenea',
       'Barra comedor',
@@ -146,7 +146,7 @@ const cabins = [
       },
     ],
     caracteristicas: [
-      'Cama queen size',
+      'Cama king size',
       'Baño y regadera',
       'Sala con chimenea',
       'Barra comedor',
@@ -203,7 +203,7 @@ const cabins = [
       },
     ],
     caracteristicas: [
-      'Cama queen size',
+      'Cama king size',
       'Baño y regadera',
       'Sala con chimenea',
       'Barra comedor',
@@ -260,7 +260,7 @@ const cabins = [
       },
     ],
     caracteristicas: [
-      'Cama queen size',
+      'Cama king size',
       'Baño y regadera',
       'Sala con chimenea',
       'Barra comedor',
@@ -316,7 +316,7 @@ const cabins = [
       },
     ],
     caracteristicas: [
-      'Cama queen size',
+      'Cama king size',
       'Baño y regadera',
       'Sala con chimenea',
       'Barra comedor',
