@@ -1499,6 +1499,11 @@ svelte-carousel@^1.0.16:
   version "1.0.16"
   resolved "https://registry.yarnpkg.com/svelte-carousel/-/svelte-carousel-1.0.16.tgz#d61ac8add35d48ecd58dc51b755de67c1236f7f6"
 
+svelte-lazy@^1.0.12:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/svelte-lazy/-/svelte-lazy-1.1.0.tgz#e984c77ed32c51eb3eadb091b1d198a8de82fbe7"
+  integrity sha512-Vol0Px4tKNK13xTs187T9wgenAgXZVHr+HCZx1Wgd5NFvgRxXR/5BE6gZAeF/BkLxLgYIprfZmJlE65slFYqOA==
+
 svelte@^3.17.3:
   version "3.44.0"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.44.0.tgz#e6176cb3ad93846ddb4140e93f43098136b23f3b"

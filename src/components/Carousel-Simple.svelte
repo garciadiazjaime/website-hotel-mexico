@@ -4,6 +4,7 @@
   export let arrows = true
 
   const arrowsClase = arrows ? '' :'hide'
+  console.log(slides)
 </script>
 
 <style>

@@ -44,7 +44,7 @@
 			name: 'Sonora',
 		},
 	];
-	
+
 	const slidesB = [
 		{
 			path: '/homepage/naturaleza/exterior_001.jpg',
@@ -134,7 +134,7 @@
 		padding: 0 140px;
 		box-sizing: border-box;
 	}
-	
+
 	.cover {
 		position: relative;
 		height: 100%;
@@ -308,7 +308,7 @@
 	.position-relative {
 		position: relative;
 	}
-	
+
 	.over-image {
 		width: 200px;
 		position: absolute;
@@ -329,6 +329,7 @@
 	}
 
 	.carousel {
+		width: 585px;
 		max-width: 585px;
 	}
 
@@ -516,7 +517,7 @@
 		.pull-right {
 			float: left;
 		}
-		.block-a { 
+		.block-a {
 			padding-top: 40px;
 		}
 		.block-d {
